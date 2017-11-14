@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.gary</groupId>
+  <artifactId>nettyrpc</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>nettyrpc</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <netty.version>4.0.24.Final</netty.version>
+    <junit.version>4.12</junit.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>io.netty</groupId>
+      <artifactId>netty-all</artifactId>
+      <version>${netty.version}</version>
+    </dependency>
+    
+    <dependency>
+	  <groupId>junit</groupId>
+	  <artifactId>junit</artifactId>
+	  <version>${junit.version}</version>
+	  <scope>test</scope>
+	</dependency>
+	</dependencies>
+  <modules>
+  	<module>nettyrpc-service</module>
+  	<module>nettyrpc-carrier</module>
+  	<module>nettyrpc-serialization</module>
+  	<module>nettyrpc-client</module>
+  	<module>nettyrpc-server</module>
+  </modules>
+</project>
