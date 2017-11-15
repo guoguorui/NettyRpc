@@ -15,8 +15,14 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 
 public class RpcClient {
 	
+	String serverAddress;
 	Class<?> serviceClass;
 	
+	
+	public RpcClient(String serverAddress) {
+		this.serverAddress = serverAddress;
+	}
+
 	public Object call(Method method,Object[] args) {
 		final RpcRequest rpcRequest=new RpcRequest();
 		rpcRequest.setInterfaceClass(serviceClass);
@@ -37,7 +43,10 @@ public class RpcClient {
 	        	}
 	        }).option(ChannelOption.SO_KEEPALIVE, true);
 	        
-			ChannelFuture future = bootstrap.connect(new InetSocketAddress("127.0.0.1",8888)).sync();
+	        String[] addresses=serverAddress.split(":");
+	        String host=addresses[0];
+	        int port=Integer.parseInt(addresses[1]);
+			ChannelFuture future = bootstrap.connect(new InetSocketAddress(host,port)).sync();
             future.channel().closeFuture().sync();
 		} catch (InterruptedException e) {
 			e.printStackTrace();

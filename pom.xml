@@ -14,6 +14,8 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <netty.version>4.0.24.Final</netty.version>
     <junit.version>4.12</junit.version>
+    <zookeeper.version>3.4.6</zookeeper.version>
+    <guava.version>19.0</guava.version>
   </properties>
 
   <dependencies>
@@ -29,6 +31,19 @@
 	  <version>${junit.version}</version>
 	  <scope>test</scope>
 	</dependency>
+	
+	<dependency>
+      <groupId>org.apache.zookeeper</groupId>
+      <artifactId>zookeeper</artifactId>
+    <version>${zookeeper.version}</version>
+    </dependency>
+       
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>${guava.version}</version>
+    </dependency>
+	
 	</dependencies>
   <modules>
   	<module>nettyrpc-service</module>
@@ -36,5 +51,7 @@
   	<module>nettyrpc-serialization</module>
   	<module>nettyrpc-client</module>
   	<module>nettyrpc-server</module>
+  	
+  	<module>nettyrpc-zookeeper</module>
   </modules>
 </project>
