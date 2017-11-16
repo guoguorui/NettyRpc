@@ -22,12 +22,6 @@ public class AnotherTest {
 					System.out.println(son);
 				}
 			}
-			/*
-			stat=zk.exists("/origin/HelloService/127.0.0.1:8888", false);
-			if(stat!=null) {
-				System.out.println("/origin/HelloService/127.0.0.1:8888 exists");
-			}
-			*/
 		} catch (KeeperException | InterruptedException e) {
 			e.printStackTrace();
 		}

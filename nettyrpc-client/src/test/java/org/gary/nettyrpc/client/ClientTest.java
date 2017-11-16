@@ -9,6 +9,6 @@ public class ClientTest {
 		FacadeClientFactory fcf=new FacadeClientFactory(new RpcClient(sd.discover("HelloService")));
 		HelloService helloService=fcf.getFacadeClient(HelloService.class);
 		System.out.println(helloService.hello("nico from ClientTest"));
-		sd.sweep();
+		sd.closeZk();
 	}
 }

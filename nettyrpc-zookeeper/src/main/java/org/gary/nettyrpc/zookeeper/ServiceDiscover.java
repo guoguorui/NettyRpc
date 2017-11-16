@@ -27,7 +27,7 @@ public class ServiceDiscover {
 		return null;
 	}
 	
-	public void sweep() {
+	public void closeZk() {
 		try {
 			zm.getZk().close();
 		} catch (InterruptedException e) {

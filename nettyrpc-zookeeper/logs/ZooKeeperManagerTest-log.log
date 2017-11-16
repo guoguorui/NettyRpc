@@ -1,0 +1,7 @@
+[INFO ]-[11-16 18:40:39]-[method:org.gary.nettyrpc.zookeeper.ZooKeeperManagerTest.testCreateNode(ZooKeeperManagerTest.java:15)]
+manager create node zkFromEclipse
+
+ [INFO ]-[11-16 18:40:40]-[method:org.gary.nettyrpc.zookeeper.ZooKeeperManagerTest.testCreateNode(ZooKeeperManagerTest.java:17)]
+manager delete all the nodes
+
+ 
