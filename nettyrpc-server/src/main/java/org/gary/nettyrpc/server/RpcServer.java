@@ -12,7 +12,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 
 public class RpcServer {
 	
-	public static void processRequest() {
+	public static void processRequest(String implPackage) {
 		EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
         try {
@@ -22,7 +22,7 @@ public class RpcServer {
         	 .childHandler(new ChannelInitializer<SocketChannel>() {
                  @Override
                  protected void initChannel(SocketChannel channel) throws Exception {
-                     channel.pipeline().addLast(new RpcServerHandler());
+                     channel.pipeline().addLast(new RpcServerHandler(implPackage));
                  }
              }).option(ChannelOption.SO_BACKLOG, 128)
              .childOption(ChannelOption.SO_KEEPALIVE, true);

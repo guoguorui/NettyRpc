@@ -18,10 +18,12 @@ public class ServiceDiscover {
 		for(String service:services) {
 			if(service.equals(serviceName)) {
 				List<String> addresses=zm.listChildren("/origin/"+serviceName);
-				Random ran=new Random();
-				int index=ran.nextInt(addresses.size());
-				String[] addressArray=addresses.toArray(new String[addresses.size()]);
-				return addressArray[index];
+				if(addresses.size()>0) {
+					Random ran=new Random();
+					int index=ran.nextInt(addresses.size());
+					String[] addressArray=addresses.toArray(new String[addresses.size()]);
+					return addressArray[index];
+				}
 			}
 		}
 		return null;

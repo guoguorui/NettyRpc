@@ -11,9 +11,15 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 
 public class RpcServerHandler extends ChannelInboundHandlerAdapter {
-
-	FastJsonSerializer serializer=new FastJsonSerializer();
 	
+	FastJsonSerializer serializer=new FastJsonSerializer();
+	String implPackage;
+	
+	public RpcServerHandler(String implPackage) {
+		super();
+		this.implPackage = implPackage;
+	}
+
 	@Override  
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
 	//接收
@@ -28,11 +34,11 @@ public class RpcServerHandler extends ChannelInboundHandlerAdapter {
 	//回应
 	RpcResponse rpcResponse=new RpcResponse();
 	Class<?> interfaceClass=cm.getInterfaceClass();
-	Object implObject=ScanImpl.scanType("org.gary.nettyrpc.server.serviceimpl", interfaceClass);
+	Object implObject=ScanImpl.scanType(implPackage, interfaceClass);
 	Method[] methods=implObject.getClass().getDeclaredMethods();
 	for(Method method:methods) {
 		if(method.getName().equals(cm.getMethodName())) {
-			rpcResponse.setResult(invokeMethod(implObject,method.getName(),cm.getArgs()));
+				rpcResponse.setResult(invokeMethod(implObject,method.getName(),cm.getArgs()));
 		}
 	}
 	byte[] reback=serializer.serialize(rpcResponse);
@@ -42,11 +48,14 @@ public class RpcServerHandler extends ChannelInboundHandlerAdapter {
 	}
 	
 	public static Object invokeMethod(Object newObj, String methodName, Object[] args)throws Exception {  
-        Class<?> ownerClass = newObj.getClass();  
-        Class<?>[] argsClass = new Class[args.length];  
-        for (int i = 0, j = args.length; i < j; i++) {  
-           argsClass[i] = args[i].getClass();  
-        }  
+        Class<?> ownerClass = newObj.getClass();
+        Class<?>[] argsClass=null;
+        if(args!=null) {
+        	argsClass = new Class[args.length];  
+        	for (int i = 0, j = args.length; i < j; i++) {  
+                argsClass[i] = args[i].getClass();  
+             }  
+        }
         Method method = ownerClass.getMethod(methodName, argsClass);  
         return method.invoke(newObj, args);  
     }  

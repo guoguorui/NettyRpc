@@ -1,0 +1,252 @@
+[INFO ]-[11-17 10:09:16]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+
+[INFO ]-[11-17 10:09:16]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:host.name=GGR-PC
+
+[INFO ]-[11-17 10:09:16]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.version=1.8.0_144
+
+[INFO ]-[11-17 10:09:16]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.vendor=Oracle Corporation
+
+[INFO ]-[11-17 10:09:16]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.home=E:\FireFox\eclipse-jee-oxygen-R-win32-x86_64\eclipse\jre
+
+[INFO ]-[11-17 10:09:16]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.class.path=E:\EclipseProject\nettyrpc\nettyrpc-client\target\test-classes;E:\EclipseProject\nettyrpc\nettyrpc-client\target\classes;E:\EclipseProject\nettyrpc\nettyrpc-carrier\target\classes;E:\EclipseProject\nettyrpc\nettyrpc-serialization\target\classes;C:\Users\GGR\.m2\repository\com\alibaba\fastjson\1.2.17\fastjson-1.2.17.jar;E:\EclipseProject\nettyrpc\nettyrpc-service\target\classes;E:\EclipseProject\nettyrpc\nettyrpc-zookeeper\target\classes;C:\Users\GGR\.m2\repository\io\netty\netty-all\4.0.24.Final\netty-all-4.0.24.Final.jar;C:\Users\GGR\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\GGR\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\GGR\.m2\repository\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;C:\Users\GGR\.m2\repository\org\slf4j\slf4j-api\1.6.1\slf4j-api-1.6.1.jar;C:\Users\GGR\.m2\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;C:\Users\GGR\.m2\repository\log4j\log4j\1.2.16\log4j-1.2.16.jar;C:\Users\GGR\.m2\repository\jline\jline\0.9.94\jline-0.9.94.jar;C:\Users\GGR\.m2\repository\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar
+
+[INFO ]-[11-17 10:09:16]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.library.path=E:\FireFox\eclipse-jee-oxygen-R-win32-x86_64\eclipse\jre\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;E:/FireFox/eclipse-jee-oxygen-R-win32-x86_64/eclipse/jre/bin/server;E:/FireFox/eclipse-jee-oxygen-R-win32-x86_64/eclipse/jre/bin;E:/FireFox/eclipse-jee-oxygen-R-win32-x86_64/eclipse/jre/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;D:\Program Files\mysql-5.6.37-winx64\bin;D:\Program Files\Python2.7;D:\Program Files\Python2.7\Scripts;D:\Program Files (x86)\Mozilla Firefox;C:\Program Files\Java\jdk1.8.0_144\bin;C:\Program Files\Java\jdk1.8.0_144\jre\bin;..;.;C:\Program Files\Java\jdk1.8.0_144\lib\dt.jar;C:\Program Files\Java\jdk1.8.0_144\lib\tools.jar;;D:\Program Files\gradle-4.1\bin;D:\Program Files\apache-maven-3.5.0\bin;D:\Program Files\MongoDB\Server\3.4\bin;D:\Program Files\Git\cmd;D:\Program Files\MATLAB\R2016a\bin;;E:\FireFox\eclipse-jee-oxygen-R-win32-x86_64\eclipse;;.
+
+[INFO ]-[11-17 10:09:16]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.io.tmpdir=C:\Users\GGR\AppData\Local\Temp\
+
+[INFO ]-[11-17 10:09:16]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.compiler=<NA>
+
+[INFO ]-[11-17 10:09:16]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.name=Windows 7
+
+[INFO ]-[11-17 10:09:16]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.arch=amd64
+
+[INFO ]-[11-17 10:09:16]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.version=6.1
+
+[INFO ]-[11-17 10:09:16]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.name=GGR
+
+[INFO ]-[11-17 10:09:16]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.home=C:\Users\GGR
+
+[INFO ]-[11-17 10:09:16]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.dir=E:\EclipseProject\nettyrpc\nettyrpc-client
+
+[INFO ]-[11-17 10:09:16]-[method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)]
+Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=5000 watcher=org.gary.nettyrpc.zookeeper.ZooKeeperManager$1@42110406
+
+[INFO ]-[11-17 10:09:16]-[method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:975)]
+Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+
+[INFO ]-[11-17 10:09:16]-[method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:852)]
+Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+
+[WARN ]-[11-17 10:09:16]-[method:org.apache.zookeeper.ClientCnxnSocket.readConnectResult(ClientCnxnSocket.java:139)]
+Connected to an old server; r-o mode will be unavailable
+
+[INFO ]-[11-17 10:09:16]-[method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1235)]
+Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x15fb9a5b3d500c9, negotiated timeout = 5000
+
+[INFO ]-[11-17 10:09:16]-[method:org.gary.nettyrpc.zookeeper.ZooKeeperManager.connect(ZooKeeperManager.java:36)]
+Successfully connected to 127.0.0.1:2181
+
+[INFO ]-[11-17 11:02:12]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+
+[INFO ]-[11-17 11:02:12]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:host.name=GGR-PC
+
+[INFO ]-[11-17 11:02:12]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.version=1.8.0_144
+
+[INFO ]-[11-17 11:02:12]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.vendor=Oracle Corporation
+
+[INFO ]-[11-17 11:02:12]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.home=E:\FireFox\eclipse-jee-oxygen-R-win32-x86_64\eclipse\jre
+
+[INFO ]-[11-17 11:02:12]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.class.path=E:\EclipseProject\nettyrpc\nettyrpc-client\target\test-classes;E:\EclipseProject\nettyrpc\nettyrpc-client\target\classes;E:\EclipseProject\nettyrpc\nettyrpc-carrier\target\classes;E:\EclipseProject\nettyrpc\nettyrpc-serialization\target\classes;C:\Users\GGR\.m2\repository\com\alibaba\fastjson\1.2.17\fastjson-1.2.17.jar;E:\EclipseProject\nettyrpc\nettyrpc-service\target\classes;E:\EclipseProject\nettyrpc\nettyrpc-zookeeper\target\classes;C:\Users\GGR\.m2\repository\io\netty\netty-all\4.0.24.Final\netty-all-4.0.24.Final.jar;C:\Users\GGR\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\GGR\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\GGR\.m2\repository\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;C:\Users\GGR\.m2\repository\org\slf4j\slf4j-api\1.6.1\slf4j-api-1.6.1.jar;C:\Users\GGR\.m2\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;C:\Users\GGR\.m2\repository\log4j\log4j\1.2.16\log4j-1.2.16.jar;C:\Users\GGR\.m2\repository\jline\jline\0.9.94\jline-0.9.94.jar;C:\Users\GGR\.m2\repository\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar
+
+[INFO ]-[11-17 11:02:12]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.library.path=E:\FireFox\eclipse-jee-oxygen-R-win32-x86_64\eclipse\jre\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;E:/FireFox/eclipse-jee-oxygen-R-win32-x86_64/eclipse/jre/bin/server;E:/FireFox/eclipse-jee-oxygen-R-win32-x86_64/eclipse/jre/bin;E:/FireFox/eclipse-jee-oxygen-R-win32-x86_64/eclipse/jre/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;D:\Program Files\mysql-5.6.37-winx64\bin;D:\Program Files\Python2.7;D:\Program Files\Python2.7\Scripts;D:\Program Files (x86)\Mozilla Firefox;C:\Program Files\Java\jdk1.8.0_144\bin;C:\Program Files\Java\jdk1.8.0_144\jre\bin;..;.;C:\Program Files\Java\jdk1.8.0_144\lib\dt.jar;C:\Program Files\Java\jdk1.8.0_144\lib\tools.jar;;D:\Program Files\gradle-4.1\bin;D:\Program Files\apache-maven-3.5.0\bin;D:\Program Files\MongoDB\Server\3.4\bin;D:\Program Files\Git\cmd;D:\Program Files\MATLAB\R2016a\bin;;E:\FireFox\eclipse-jee-oxygen-R-win32-x86_64\eclipse;;.
+
+[INFO ]-[11-17 11:02:12]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.io.tmpdir=C:\Users\GGR\AppData\Local\Temp\
+
+[INFO ]-[11-17 11:02:12]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.compiler=<NA>
+
+[INFO ]-[11-17 11:02:12]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.name=Windows 7
+
+[INFO ]-[11-17 11:02:12]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.arch=amd64
+
+[INFO ]-[11-17 11:02:12]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.version=6.1
+
+[INFO ]-[11-17 11:02:12]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.name=GGR
+
+[INFO ]-[11-17 11:02:12]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.home=C:\Users\GGR
+
+[INFO ]-[11-17 11:02:12]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.dir=E:\EclipseProject\nettyrpc\nettyrpc-client
+
+[INFO ]-[11-17 11:02:12]-[method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)]
+Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=5000 watcher=org.gary.nettyrpc.zookeeper.ZooKeeperManager$1@42110406
+
+[INFO ]-[11-17 11:02:13]-[method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:975)]
+Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+
+[INFO ]-[11-17 11:02:13]-[method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:852)]
+Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+
+[WARN ]-[11-17 11:02:13]-[method:org.apache.zookeeper.ClientCnxnSocket.readConnectResult(ClientCnxnSocket.java:139)]
+Connected to an old server; r-o mode will be unavailable
+
+[INFO ]-[11-17 11:02:13]-[method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1235)]
+Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x15fb9a5b3d500cb, negotiated timeout = 5000
+
+[INFO ]-[11-17 11:02:13]-[method:org.gary.nettyrpc.zookeeper.ZooKeeperManager.connect(ZooKeeperManager.java:36)]
+Successfully connected to 127.0.0.1:2181
+
+[INFO ]-[11-17 11:36:32]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+
+[INFO ]-[11-17 11:36:32]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:host.name=GGR-PC
+
+[INFO ]-[11-17 11:36:32]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.version=1.8.0_144
+
+[INFO ]-[11-17 11:36:32]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.vendor=Oracle Corporation
+
+[INFO ]-[11-17 11:36:32]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.home=E:\FireFox\eclipse-jee-oxygen-R-win32-x86_64\eclipse\jre
+
+[INFO ]-[11-17 11:36:32]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.class.path=E:\EclipseProject\nettyrpc\nettyrpc-client\target\test-classes;E:\EclipseProject\nettyrpc\nettyrpc-client\target\classes;E:\EclipseProject\nettyrpc\nettyrpc-carrier\target\classes;E:\EclipseProject\nettyrpc\nettyrpc-serialization\target\classes;C:\Users\GGR\.m2\repository\com\alibaba\fastjson\1.2.17\fastjson-1.2.17.jar;E:\EclipseProject\nettyrpc\nettyrpc-service\target\classes;E:\EclipseProject\nettyrpc\nettyrpc-zookeeper\target\classes;C:\Users\GGR\.m2\repository\io\netty\netty-all\4.0.24.Final\netty-all-4.0.24.Final.jar;C:\Users\GGR\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\GGR\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\GGR\.m2\repository\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;C:\Users\GGR\.m2\repository\org\slf4j\slf4j-api\1.6.1\slf4j-api-1.6.1.jar;C:\Users\GGR\.m2\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;C:\Users\GGR\.m2\repository\log4j\log4j\1.2.16\log4j-1.2.16.jar;C:\Users\GGR\.m2\repository\jline\jline\0.9.94\jline-0.9.94.jar;C:\Users\GGR\.m2\repository\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar
+
+[INFO ]-[11-17 11:36:32]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.library.path=E:\FireFox\eclipse-jee-oxygen-R-win32-x86_64\eclipse\jre\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;E:/FireFox/eclipse-jee-oxygen-R-win32-x86_64/eclipse/jre/bin/server;E:/FireFox/eclipse-jee-oxygen-R-win32-x86_64/eclipse/jre/bin;E:/FireFox/eclipse-jee-oxygen-R-win32-x86_64/eclipse/jre/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;D:\Program Files\mysql-5.6.37-winx64\bin;D:\Program Files\Python2.7;D:\Program Files\Python2.7\Scripts;D:\Program Files (x86)\Mozilla Firefox;C:\Program Files\Java\jdk1.8.0_144\bin;C:\Program Files\Java\jdk1.8.0_144\jre\bin;..;.;C:\Program Files\Java\jdk1.8.0_144\lib\dt.jar;C:\Program Files\Java\jdk1.8.0_144\lib\tools.jar;;D:\Program Files\gradle-4.1\bin;D:\Program Files\apache-maven-3.5.0\bin;D:\Program Files\MongoDB\Server\3.4\bin;D:\Program Files\Git\cmd;D:\Program Files\MATLAB\R2016a\bin;;E:\FireFox\eclipse-jee-oxygen-R-win32-x86_64\eclipse;;.
+
+[INFO ]-[11-17 11:36:32]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.io.tmpdir=C:\Users\GGR\AppData\Local\Temp\
+
+[INFO ]-[11-17 11:36:32]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.compiler=<NA>
+
+[INFO ]-[11-17 11:36:32]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.name=Windows 7
+
+[INFO ]-[11-17 11:36:32]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.arch=amd64
+
+[INFO ]-[11-17 11:36:32]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.version=6.1
+
+[INFO ]-[11-17 11:36:32]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.name=GGR
+
+[INFO ]-[11-17 11:36:32]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.home=C:\Users\GGR
+
+[INFO ]-[11-17 11:36:32]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.dir=E:\EclipseProject\nettyrpc\nettyrpc-client
+
+[INFO ]-[11-17 11:36:32]-[method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)]
+Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=5000 watcher=org.gary.nettyrpc.zookeeper.ZooKeeperManager$1@42110406
+
+[INFO ]-[11-17 11:36:32]-[method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:975)]
+Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+
+[INFO ]-[11-17 11:36:32]-[method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:852)]
+Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+
+[WARN ]-[11-17 11:36:32]-[method:org.apache.zookeeper.ClientCnxnSocket.readConnectResult(ClientCnxnSocket.java:139)]
+Connected to an old server; r-o mode will be unavailable
+
+[INFO ]-[11-17 11:36:32]-[method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1235)]
+Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x15fb9a5b3d500d1, negotiated timeout = 5000
+
+[INFO ]-[11-17 11:36:32]-[method:org.gary.nettyrpc.zookeeper.ZooKeeperManager.connect(ZooKeeperManager.java:36)]
+Successfully connected to 127.0.0.1:2181
+
+[INFO ]-[11-17 12:07:33]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+
+[INFO ]-[11-17 12:07:33]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:host.name=GGR-PC
+
+[INFO ]-[11-17 12:07:33]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.version=1.8.0_144
+
+[INFO ]-[11-17 12:07:33]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.vendor=Oracle Corporation
+
+[INFO ]-[11-17 12:07:33]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.home=E:\FireFox\eclipse-jee-oxygen-R-win32-x86_64\eclipse\jre
+
+[INFO ]-[11-17 12:07:33]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.class.path=E:\EclipseProject\nettyrpc\nettyrpc-client\target\test-classes;E:\EclipseProject\nettyrpc\nettyrpc-client\target\classes;E:\EclipseProject\nettyrpc\nettyrpc-carrier\target\classes;E:\EclipseProject\nettyrpc\nettyrpc-serialization\target\classes;C:\Users\GGR\.m2\repository\com\alibaba\fastjson\1.2.17\fastjson-1.2.17.jar;E:\EclipseProject\nettyrpc\nettyrpc-service\target\classes;E:\EclipseProject\nettyrpc\nettyrpc-zookeeper\target\classes;C:\Users\GGR\.m2\repository\io\netty\netty-all\4.0.24.Final\netty-all-4.0.24.Final.jar;C:\Users\GGR\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\GGR\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\GGR\.m2\repository\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;C:\Users\GGR\.m2\repository\org\slf4j\slf4j-api\1.6.1\slf4j-api-1.6.1.jar;C:\Users\GGR\.m2\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;C:\Users\GGR\.m2\repository\log4j\log4j\1.2.16\log4j-1.2.16.jar;C:\Users\GGR\.m2\repository\jline\jline\0.9.94\jline-0.9.94.jar;C:\Users\GGR\.m2\repository\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar
+
+[INFO ]-[11-17 12:07:33]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.library.path=E:\FireFox\eclipse-jee-oxygen-R-win32-x86_64\eclipse\jre\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;E:/FireFox/eclipse-jee-oxygen-R-win32-x86_64/eclipse/jre/bin/server;E:/FireFox/eclipse-jee-oxygen-R-win32-x86_64/eclipse/jre/bin;E:/FireFox/eclipse-jee-oxygen-R-win32-x86_64/eclipse/jre/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;D:\Program Files\mysql-5.6.37-winx64\bin;D:\Program Files\Python2.7;D:\Program Files\Python2.7\Scripts;D:\Program Files (x86)\Mozilla Firefox;C:\Program Files\Java\jdk1.8.0_144\bin;C:\Program Files\Java\jdk1.8.0_144\jre\bin;..;.;C:\Program Files\Java\jdk1.8.0_144\lib\dt.jar;C:\Program Files\Java\jdk1.8.0_144\lib\tools.jar;;D:\Program Files\gradle-4.1\bin;D:\Program Files\apache-maven-3.5.0\bin;D:\Program Files\MongoDB\Server\3.4\bin;D:\Program Files\Git\cmd;D:\Program Files\MATLAB\R2016a\bin;;E:\FireFox\eclipse-jee-oxygen-R-win32-x86_64\eclipse;;.
+
+[INFO ]-[11-17 12:07:33]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.io.tmpdir=C:\Users\GGR\AppData\Local\Temp\
+
+[INFO ]-[11-17 12:07:33]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.compiler=<NA>
+
+[INFO ]-[11-17 12:07:33]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.name=Windows 7
+
+[INFO ]-[11-17 12:07:33]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.arch=amd64
+
+[INFO ]-[11-17 12:07:33]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.version=6.1
+
+[INFO ]-[11-17 12:07:33]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.name=GGR
+
+[INFO ]-[11-17 12:07:33]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.home=C:\Users\GGR
+
+[INFO ]-[11-17 12:07:33]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.dir=E:\EclipseProject\nettyrpc\nettyrpc-client
+
+[INFO ]-[11-17 12:07:33]-[method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)]
+Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=5000 watcher=org.gary.nettyrpc.zookeeper.ZooKeeperManager$1@3eb07fd3
+
+[INFO ]-[11-17 12:07:33]-[method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:975)]
+Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+
+[INFO ]-[11-17 12:07:33]-[method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:852)]
+Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+
+[WARN ]-[11-17 12:07:34]-[method:org.apache.zookeeper.ClientCnxnSocket.readConnectResult(ClientCnxnSocket.java:139)]
+Connected to an old server; r-o mode will be unavailable
+
+[INFO ]-[11-17 12:07:34]-[method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1235)]
+Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x15fb9a5b3d500ec, negotiated timeout = 5000
+
+[INFO ]-[11-17 12:07:34]-[method:org.gary.nettyrpc.zookeeper.ZooKeeperManager.connect(ZooKeeperManager.java:36)]
+Successfully connected to 127.0.0.1:2181
+
