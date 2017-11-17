@@ -17,13 +17,13 @@ public class ServiceDiscover {
 		List<String> services = zm.listChildren("/origin");
 		for(String service:services) {
 			if(service.equals(serviceName)) {
+				//这里考虑阻塞
 				List<String> addresses=zm.listChildren("/origin/"+serviceName);
-				if(addresses.size()>0) {
-					Random ran=new Random();
-					int index=ran.nextInt(addresses.size());
-					String[] addressArray=addresses.toArray(new String[addresses.size()]);
-					return addressArray[index];
-				}
+				Random ran=new Random();
+				int index=ran.nextInt(addresses.size());
+				String[] addressArray=addresses.toArray(new String[addresses.size()]);
+				return addressArray[index];
+				
 			}
 		}
 		return null;
