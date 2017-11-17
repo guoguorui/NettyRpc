@@ -3,9 +3,9 @@ package org.gary.nettyrpc.zookeeper;
 
 public class ServiceRegister {
 	
-	private ZooKeeperManager zm=new ZooKeeperManager("127.0.0.1:2181");
+	public static ZooKeeperManager zm=new ZooKeeperManager("127.0.0.1:2181");
 	
-	public void register(String serviceName,String address) {
+	public static void register(String serviceName,String address) {
 		zm.connect();
 		zm.createPersistentNode("/origin/"+serviceName);
 		zm.createEphemeralNode("/origin/"+serviceName+"/"+address);
