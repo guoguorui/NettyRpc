@@ -27,7 +27,6 @@ public class ZooKeeperManager implements Watcher{
 	}
 
     public void connect() {
-        
         try {
             zk = new ZooKeeper(zkAddress, ZK_SESSION_TIMEOUT, this);
             connectedSignal.await();
