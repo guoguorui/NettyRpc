@@ -7,6 +7,7 @@ public class ServiceRegister {
 	
 	public void register(String serviceName,String address) {
 		zm.connect();
+		zm.createPersistentNode("/origin/"+serviceName);
 		zm.createEphemeralNode("/origin/"+serviceName+"/"+address);
 		System.out.println("创建"+"/origin/"+serviceName+"/"+address+"成功");
 	}

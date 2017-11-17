@@ -42,8 +42,13 @@ public class ZooKeeperManager {
     
     public void createPersistentNode(String nodePath) {
     	try {
-			zk.create(nodePath, null,
-			        ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
+    		if(zk.exists(nodePath, false)!=null) {
+        		return;
+        	}
+    		else {
+    			zk.create(nodePath, null,
+    			        ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
+    		}
 		} catch (KeeperException | InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -51,8 +56,13 @@ public class ZooKeeperManager {
     
     public void createEphemeralNode(String nodePath) {
     	try {
-			zk.create(nodePath, null,
-			        ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL);
+    		if(zk.exists(nodePath, false)!=null) {
+        		return;
+        	}
+    		else {
+    			zk.create(nodePath, null,
+    			        ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL);
+    		}
 		} catch (KeeperException | InterruptedException e) {
 			e.printStackTrace();
 		}
