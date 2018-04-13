@@ -3,8 +3,8 @@ package org.gary.nettyrpc.carrier;
 import java.io.Serializable;
 
 //做id处理
-public class RpcRequest implements Serializable{
-	
+public class RpcRequest implements Serializable {
+
 	/**
 	 * 
 	 */

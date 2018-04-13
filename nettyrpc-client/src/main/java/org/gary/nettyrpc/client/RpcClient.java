@@ -14,17 +14,16 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 
 public class RpcClient {
-	
+
 	String serverAddress;
 	Class<?> serviceClass;
-	
-	
+
 	public RpcClient(String serverAddress) {
 		this.serverAddress = serverAddress;
 	}
 
-	public Object call(Method method,Object[] args) {
-		final RpcRequest rpcRequest=new RpcRequest();
+	public Object call(Method method, Object[] args) {
+		final RpcRequest rpcRequest = new RpcRequest();
 		rpcRequest.setInterfaceClass(serviceClass);
 		rpcRequest.setMessage("hello nico from client");
 		rpcRequest.setMethodName(method.getName());
@@ -33,31 +32,30 @@ public class RpcClient {
 		EventLoopGroup group = new NioEventLoopGroup();
 		final RpcResponse response = new RpcResponse();
 		try {
-	        Bootstrap bootstrap = new Bootstrap();
-	        bootstrap.group(group).channel(NioSocketChannel.class)
-	        .handler(new ChannelInitializer<SocketChannel>() {
-	        	@Override
-	            protected void initChannel(SocketChannel channel) throws Exception {
-	        		//在connect之后就发送
-	        		channel.pipeline().addLast(new RpcClientHandler(rpcRequest));
-	        	}
-	        }).option(ChannelOption.SO_KEEPALIVE, true);
-	        
-	        String[] addresses=serverAddress.split(":");
-	        String host=addresses[0];
-	        int port=Integer.parseInt(addresses[1]);
-			ChannelFuture future = bootstrap.connect(new InetSocketAddress(host,port)).sync();
-            future.channel().closeFuture().sync();
+			Bootstrap bootstrap = new Bootstrap();
+			bootstrap.group(group).channel(NioSocketChannel.class).handler(new ChannelInitializer<SocketChannel>() {
+				@Override
+				protected void initChannel(SocketChannel channel) throws Exception {
+					// 在connect之后就发送
+					channel.pipeline().addLast(new RpcClientHandler(rpcRequest));
+				}
+			}).option(ChannelOption.SO_KEEPALIVE, true);
+
+			String[] addresses = serverAddress.split(":");
+			String host = addresses[0];
+			int port = Integer.parseInt(addresses[1]);
+			ChannelFuture future = bootstrap.connect(new InetSocketAddress(host, port)).sync();
+			future.channel().closeFuture().sync();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
-		}finally {
-            group.shutdownGracefully();
-        }
-        
+		} finally {
+			group.shutdownGracefully();
+		}
+
 		return response;
 	}
-	
+
 	public void setServiceClass(Class<?> serviceClass) {
-		this.serviceClass=serviceClass;
+		this.serviceClass = serviceClass;
 	}
 }
