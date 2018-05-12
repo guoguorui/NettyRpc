@@ -1,3 +1,5 @@
+package org.gary.nettyrpc.test;
+
 import org.gary.nettyrpc.client.Client;
 import org.gary.nettyrpc.service.HelloService;
 

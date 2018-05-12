@@ -5,13 +5,12 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import org.gary.nettyrpc.carrier.RpcRequest;
 import org.gary.nettyrpc.carrier.RpcResponse;
-import org.gary.nettyrpc.common.FastJsonSerializer;
+import org.gary.nettyrpc.common.SerializeUtils;
 
 import java.lang.reflect.Method;
 
 public class RpcServerHandler extends ChannelInboundHandlerAdapter {
 
-	FastJsonSerializer serializer = new FastJsonSerializer();
 	String implPackage;
 
 	public RpcServerHandler(String implPackage) {
@@ -25,7 +24,7 @@ public class RpcServerHandler extends ChannelInboundHandlerAdapter {
 		ByteBuf bytebuf = (ByteBuf) msg;
 		byte[] req = new byte[bytebuf.readableBytes()];
 		bytebuf.readBytes(req);
-		RpcRequest cm = serializer.deserialize(req, RpcRequest.class);
+		RpcRequest cm = SerializeUtils.deserialize(req, RpcRequest.class);
 		System.out.println(cm.getMessage());
 		// class类成员序列化失败,很可能是class本身包含了全局的命名，而在不同项目中的路径不同而序列失败
 		// 将接口共享即可
@@ -40,7 +39,7 @@ public class RpcServerHandler extends ChannelInboundHandlerAdapter {
 				rpcResponse.setResult(invokeMethod(implObject, method.getName(), cm.getArgs()));
 			}
 		}
-		byte[] reback = serializer.serialize(rpcResponse);
+		byte[] reback = SerializeUtils.serialize(rpcResponse,RpcResponse.class);
 		bytebuf.clear();
 		bytebuf.writeBytes(reback);
 		ctx.writeAndFlush(bytebuf);
