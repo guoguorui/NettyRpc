@@ -14,16 +14,11 @@ import org.gary.nettyrpc.carrier.RpcResponse;
 import java.lang.reflect.Method;
 import java.net.InetSocketAddress;
 
-public class RpcClient {
+class RpcClient {
 
-	String serverAddress;
-	Class<?> serviceClass;
+	private Class<?> serviceClass;
 
-	public RpcClient(String serverAddress) {
-		this.serverAddress = serverAddress;
-	}
-
-	public Object call(Method method, Object[] args) {
+    Object call(String serverAddress,Method method, Object[] args) {
 		final RpcRequest rpcRequest = new RpcRequest();
 		rpcRequest.setInterfaceClass(serviceClass);
 		rpcRequest.setMessage("hello nico from client");
@@ -31,17 +26,14 @@ public class RpcClient {
 		rpcRequest.setArgs(args);
 		rpcRequest.setReturnType(String.class);
 		EventLoopGroup group = new NioEventLoopGroup();
-		final RpcResponse response = new RpcResponse();
+		RpcClientHandler rpcClientHandler=new RpcClientHandler(rpcRequest);
+        MyChannelInitializer myChannelInitializer=new MyChannelInitializer(rpcClientHandler);
 		try {
 			Bootstrap bootstrap = new Bootstrap();
-			bootstrap.group(group).channel(NioSocketChannel.class).handler(new ChannelInitializer<SocketChannel>() {
-				@Override
-				protected void initChannel(SocketChannel channel) throws Exception {
-					// 在connect之后就发送
-					channel.pipeline().addLast(new RpcClientHandler(rpcRequest));
-				}
-			}).option(ChannelOption.SO_KEEPALIVE, true);
-
+			bootstrap.group(group).
+                    channel(NioSocketChannel.class).
+                    handler(myChannelInitializer).
+                    option(ChannelOption.SO_KEEPALIVE, true);
 			String[] addresses = serverAddress.split(":");
 			String host = addresses[0];
 			int port = Integer.parseInt(addresses[1]);
@@ -52,11 +44,10 @@ public class RpcClient {
 		} finally {
 			group.shutdownGracefully();
 		}
-
-		return response;
+		return rpcClientHandler.rpcResponse;
 	}
 
-	public void setServiceClass(Class<?> serviceClass) {
+    void setServiceClass(Class<?> serviceClass) {
 		this.serviceClass = serviceClass;
 	}
 }

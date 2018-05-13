@@ -2,7 +2,7 @@ package org.gary.nettyrpc.zookeeper;
 
 public class ServiceRegister {
 
-	public static ZooKeeperManager zm = new ZooKeeperManager("127.0.0.1:2181");
+	private static ZooKeeperManager zm = new ZooKeeperManager("127.0.0.1:2181");
 
 	public static void register(String serviceName, String address) {
 		zm.connect();

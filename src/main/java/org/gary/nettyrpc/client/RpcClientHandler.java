@@ -8,12 +8,15 @@ import org.gary.nettyrpc.carrier.RpcRequest;
 import org.gary.nettyrpc.carrier.RpcResponse;
 import org.gary.nettyrpc.common.SerializeUtils;
 
+import java.util.HashMap;
+
 //处理完从服务器收到的字节被译码通道转换成了RpcResponse,在channelRead0的参数中
 public class RpcClientHandler extends ChannelInboundHandlerAdapter {
 
 	private ByteBuf clientMessage;
+	RpcResponse rpcResponse;
 
-	public RpcClientHandler(RpcRequest rpcRequest) {
+    RpcClientHandler(RpcRequest rpcRequest) {
 		byte[] req = SerializeUtils.serialize(rpcRequest,RpcRequest.class);
 		clientMessage = Unpooled.buffer(req.length);
 		clientMessage.writeBytes(req);
@@ -29,9 +32,8 @@ public class RpcClientHandler extends ChannelInboundHandlerAdapter {
 		ByteBuf buf = (ByteBuf) msg;
 		byte[] req = new byte[buf.readableBytes()];
 		buf.readBytes(req);
-		Object message = SerializeUtils.deserialize(req, RpcResponse.class).getResult();
-		// String message = new String(req,"UTF-8");
-		System.out.println(message);
+        rpcResponse=SerializeUtils.deserialize(req,RpcResponse.class);
+        ctx.close().sync();
 	}
 
 	@Override

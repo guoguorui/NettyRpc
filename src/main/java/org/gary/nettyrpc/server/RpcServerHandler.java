@@ -11,7 +11,7 @@ import java.lang.reflect.Method;
 
 public class RpcServerHandler extends ChannelInboundHandlerAdapter {
 
-	String implPackage;
+	private String implPackage;
 
 	public RpcServerHandler(String implPackage) {
 		super();
@@ -45,7 +45,7 @@ public class RpcServerHandler extends ChannelInboundHandlerAdapter {
 		ctx.writeAndFlush(bytebuf);
 	}
 
-	public static Object invokeMethod(Object newObj, String methodName, Object[] args) throws Exception {
+    private static Object invokeMethod(Object newObj, String methodName, Object[] args) throws Exception {
 		Class<?> ownerClass = newObj.getClass();
 		Class<?>[] argsClass = null;
 		if (args != null) {

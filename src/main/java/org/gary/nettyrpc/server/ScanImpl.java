@@ -6,7 +6,7 @@ import java.io.File;
 import java.net.URL;
 
 public class ScanImpl {
-	public static Object scanType(String basePackage,Class<?> interfaceClass){
+    static Object scanType(String basePackage,Class<?> interfaceClass){
 			String path=basePackage.replace(".", "/");
 			ClassLoader cl=ScanImpl.class.getClassLoader();
 			URL url = cl.getResource(path);

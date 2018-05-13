@@ -8,21 +8,23 @@ import java.lang.reflect.Proxy;
 
 public class ProxyFactory implements InvocationHandler {
 
-	RpcClient rpcClient;
+    private RpcClient rpcClient;
+    private String serverAddress;
 
-	public ProxyFactory(RpcClient rpcClient) {
-		this.rpcClient = rpcClient;
-	}
+    ProxyFactory(RpcClient rpcClient,String serverAddress) {
+        this.rpcClient = rpcClient;
+        this.serverAddress=serverAddress;
+    }
 
-	public <T> T getImplObj(Class<T> clazz) {
-		this.rpcClient.setServiceClass(clazz);
-		@SuppressWarnings("unchecked")
-		T implObj = (T) Proxy.newProxyInstance(clazz.getClassLoader(), new Class[] { clazz }, this);
-		return implObj;
-	}
+    <T> T getImplObj(Class<T> clazz) {
+        this.rpcClient.setServiceClass(clazz);
+        @SuppressWarnings("unchecked")
+        T implObj = (T) Proxy.newProxyInstance(clazz.getClassLoader(), new Class[] { clazz }, this);
+        return implObj;
+    }
 
-	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-		RpcResponse rpcResponse = (RpcResponse) rpcClient.call(method, args);
-		return rpcResponse.getResult();
-	}
+    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        RpcResponse rpcResponse = (RpcResponse) rpcClient.call(serverAddress,method, args);
+        return rpcResponse.getResult();
+    }
 }
