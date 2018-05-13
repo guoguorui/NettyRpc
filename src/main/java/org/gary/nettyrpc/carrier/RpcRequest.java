@@ -7,7 +7,6 @@ public class RpcRequest implements Serializable {
 	private static final long serialVersionUID = 433376551561784065L;
 	private String message;
 	private String methodName;
-	private Class<?> returnType;
 	private Class<?> interfaceClass;
 	private Object[] args;
 
@@ -25,14 +24,6 @@ public class RpcRequest implements Serializable {
 
 	public void setInterfaceClass(Class<?> interfaceClass) {
 		this.interfaceClass = interfaceClass;
-	}
-
-	public Class<?> getReturnType() {
-		return returnType;
-	}
-
-	public void setReturnType(Class<?> returnType) {
-		this.returnType = returnType;
 	}
 
 	public String getMethodName() {

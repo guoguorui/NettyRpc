@@ -17,14 +17,19 @@ import java.net.InetSocketAddress;
 class RpcClient {
 
 	private Class<?> serviceClass;
+	private String serverAddress;
 
-    Object call(String serverAddress,Method method, Object[] args) {
-		final RpcRequest rpcRequest = new RpcRequest();
+    RpcClient(Class<?> serviceClass, String serverAddress) {
+        this.serviceClass = serviceClass;
+        this.serverAddress = serverAddress;
+    }
+
+    RpcResponse call(Method method, Object[] args) {
+		RpcRequest rpcRequest = new RpcRequest();
 		rpcRequest.setInterfaceClass(serviceClass);
 		rpcRequest.setMessage("hello nico from client");
 		rpcRequest.setMethodName(method.getName());
 		rpcRequest.setArgs(args);
-		rpcRequest.setReturnType(String.class);
 		EventLoopGroup group = new NioEventLoopGroup();
 		RpcClientHandler rpcClientHandler=new RpcClientHandler(rpcRequest);
         MyChannelInitializer myChannelInitializer=new MyChannelInitializer(rpcClientHandler);
@@ -45,9 +50,5 @@ class RpcClient {
 			group.shutdownGracefully();
 		}
 		return rpcClientHandler.rpcResponse;
-	}
-
-    void setServiceClass(Class<?> serviceClass) {
-		this.serviceClass = serviceClass;
 	}
 }

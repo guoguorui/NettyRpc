@@ -15,6 +15,7 @@ public class ServiceDiscover {
 	public String discover(String serviceName) {
 		zm.connect();
 		List<String> services = zm.listChildren("/origin");
+		String address=null;
 		for (String service : services) {
 			if (service.equals(serviceName)) {
 				// 这里考虑阻塞
@@ -22,18 +23,14 @@ public class ServiceDiscover {
 				Random ran = new Random();
 				int index = ran.nextInt(addresses.size());
 				String[] addressArray = addresses.toArray(new String[addresses.size()]);
-				return addressArray[index];
-
+				address = addressArray[index];
 			}
 		}
-		return null;
-	}
-
-	public void closeZk() {
-		try {
-			zm.getZk().close();
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+        try {
+            zm.getZk().close();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+		return address;
 	}
 }
