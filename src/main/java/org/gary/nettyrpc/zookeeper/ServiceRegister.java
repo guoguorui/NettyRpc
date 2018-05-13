@@ -2,13 +2,22 @@ package org.gary.nettyrpc.zookeeper;
 
 public class ServiceRegister {
 
-	private static ZooKeeperManager zm = new ZooKeeperManager("127.0.0.1:2181");
+    private ZKManager zm;
 
-	public static void register(String serviceName, String address) {
+    public ServiceRegister(String zkAddress){
+        zm=new ZKManager(zkAddress);
+    }
+
+	public void register(String serviceName, String address) {
 		zm.connect();
-		zm.createPersistentNode("/origin/" + serviceName);
-		zm.createEphemeralNode("/origin/" + serviceName + "/" + address);
-		System.out.println("创建" + "/origin/" + serviceName + "/" + address + "成功");
+		String prePath=ZKManager.ZK_REGISTRY_PATH+"/";
+		zm.createPersistentNode(prePath + serviceName);
+		zm.createEphemeralNode(prePath + serviceName + "/" + address);
+		System.out.println("创建 " + prePath + serviceName + "/" + address + "成功");
 	}
+
+	public void closeZk(){
+       zm.closeConnect();
+    }
 
 }

@@ -11,7 +11,7 @@ public class ClientTest {
 		if (helloService != null) {
 			System.out.println(helloService.hello());
 		}*/
-        UserService userInterface=Client.getImpl(UserService.class);
+        UserService userInterface=Client.getImpl(UserService.class,"127.0.0.1:2181");
         User user=userInterface.getUser();
         System.out.println("泪流满面: "+user.getName());
         System.out.println("泪流满面: "+user.getPassword());

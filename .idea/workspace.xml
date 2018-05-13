@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1dcf8d5e-1b63-496f-b891-511105526e06" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/gary/nettyrpc/zookeeper/ZooKeeperManager.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/gary/nettyrpc/client/Client.class" afterPath="$PROJECT_DIR$/target/classes/org/gary/nettyrpc/client/Client.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/gary/nettyrpc/zookeeper/ServiceDiscover.class" afterPath="$PROJECT_DIR$/target/classes/org/gary/nettyrpc/zookeeper/ServiceDiscover.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/gary/nettyrpc/zookeeper/ServiceRegister.class" afterPath="$PROJECT_DIR$/target/classes/org/gary/nettyrpc/zookeeper/ServiceRegister.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/org/gary/nettyrpc/test/ClientTest.class" afterPath="$PROJECT_DIR$/target/test-classes/org/gary/nettyrpc/test/ClientTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/log.log" afterPath="$PROJECT_DIR$/logs/log.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/server/RpcServerHandler.java" afterPath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/server/RpcServerHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/server/ScanImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/server/ScanImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/client/Client.java" afterPath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/client/Client.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/zookeeper/ServiceDiscover.java" afterPath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/zookeeper/ServiceDiscover.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/zookeeper/ServiceRegister.java" afterPath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/zookeeper/ServiceRegister.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/ClientTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/ClientTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/ServerTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/ServerTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/zookeeper/ZooKeeperManager.java" afterPath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/zookeeper/ZKManager.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -17,24 +27,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RpcClient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/client/RpcClient.java">
+      <file leaf-file-name="ClientTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/ClientTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+            <state relative-caret-position="190">
+              <caret line="13" column="78" lean-forward="false" selection-start-line="13" selection-start-column="78" selection-end-line="13" selection-end-column="78" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RpcClientHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/client/RpcClientHandler.java">
+      <file leaf-file-name="ServerTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/ServerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="30" column="23" lean-forward="false" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+            <state relative-caret-position="131">
+              <caret line="9" column="65" lean-forward="true" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/client/Client.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="7" column="58" lean-forward="false" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -61,13 +81,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScanImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ScanImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/server/ScanImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="228">
               <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZKManager.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/zookeeper/ZKManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServiceRegister.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/zookeeper/ServiceRegister.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="169">
+              <caret line="19" column="10" lean-forward="false" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+              <folding>
+                <element signature="e#141#142#0" expanded="true" />
+                <element signature="e#184#185#0" expanded="true" />
+                <element signature="e#529#530#0" expanded="true" />
+                <element signature="e#561#562#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -87,47 +132,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/client/Client.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="50" lean-forward="true" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyChannelInitializer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/client/MyChannelInitializer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProxyFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/client/ProxyFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="20" column="59" lean-forward="true" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#420#450#1" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ServiceDiscover.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/zookeeper/ServiceDiscover.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="25" column="46" lean-forward="false" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
-              <folding />
+            <state relative-caret-position="119">
+              <caret line="10" column="15" lean-forward="false" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+              <folding>
+                <element signature="e#190#191#0" expanded="true" />
+                <element signature="e#233#234#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -165,7 +178,6 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/common/SerializeUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/zookeeper/ServiceRegister.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/zookeeper/ZooKeeperManager.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/carrier/RpcResponse.java" />
@@ -173,17 +185,19 @@
         <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/client/ChannelInitializer.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/ObjectTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/client/MyChannelInitializer.java" />
-        <option value="$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/ServerTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/ClientTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/serviceimpl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/carrier/RpcRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/client/ProxyFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/client/Client.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/client/RpcClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/client/RpcClientHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/zookeeper/ServiceDiscover.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/server/RpcServerHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/server/ScanImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/client/Client.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/ClientTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/ServerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/zookeeper/ServiceRegister.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/zookeeper/ServiceDiscover.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/zookeeper/ZKManager.java" />
       </list>
     </option>
   </component>
@@ -524,8 +538,8 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.ClientTest" />
-        <item index="1" class="java.lang.String" itemvalue="Application.ServerTest" />
+        <item index="0" class="java.lang.String" itemvalue="Application.ServerTest" />
+        <item index="1" class="java.lang.String" itemvalue="Application.ClientTest" />
         <item index="2" class="java.lang.String" itemvalue="Application.ObjectTest" />
         <item index="3" class="java.lang.String" itemvalue="Application.SerializerTest" />
       </list>
@@ -642,7 +656,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/zookeeper/ZooKeeperManager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/zookeeper/ZKManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="14" column="34" lean-forward="false" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
@@ -721,22 +735,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/zookeeper/ServiceRegister.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="23" lean-forward="false" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/zookeeper/ZooKeeperManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -809,24 +807,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/ServerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/ClientTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/carrier/RpcRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -839,14 +819,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="74">
           <caret line="4" column="48" lean-forward="false" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/client/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="50" lean-forward="true" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
           <folding />
         </state>
       </provider>
@@ -890,14 +862,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/zookeeper/ServiceDiscover.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="25" column="46" lean-forward="false" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/common/SerializeUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
@@ -935,6 +899,64 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/client/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="58" lean-forward="false" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/ClientTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="13" column="78" lean-forward="false" selection-start-line="13" selection-start-column="78" selection-end-line="13" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/ServerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="9" column="65" lean-forward="true" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/zookeeper/ServiceRegister.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="19" column="10" lean-forward="false" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+          <folding>
+            <element signature="e#141#142#0" expanded="true" />
+            <element signature="e#184#185#0" expanded="true" />
+            <element signature="e#529#530#0" expanded="true" />
+            <element signature="e#561#562#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/zookeeper/ServiceDiscover.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="15" lean-forward="false" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+          <folding>
+            <element signature="e#190#191#0" expanded="true" />
+            <element signature="e#233#234#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/zookeeper/ZKManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>

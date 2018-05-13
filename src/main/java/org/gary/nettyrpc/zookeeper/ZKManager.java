@@ -7,32 +7,48 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
-public class ZooKeeperManager implements Watcher {
+public class ZKManager implements Watcher {
 
 	private static final int ZK_SESSION_TIMEOUT = 5000;
-	public static final String ZK_REGISTRY_PATH = "/origin";
-	private static final Logger LOGGER = Logger.getLogger(ZooKeeperManager.class);
+	static final String ZK_REGISTRY_PATH = "/origin";
+	private static final Logger LOGGER = Logger.getLogger(ZKManager.class);
 	private String zkAddress;
 	private ZooKeeper zk;
 	private final CountDownLatch connectedSignal = new CountDownLatch(1);
 	private final CountDownLatch availableSignal = new CountDownLatch(1);
-	private boolean waitForavailable = false;
+	private boolean waitForAvailable = false;
 
-	public ZooKeeperManager(String zkAddress) {
+	public ZKManager(String zkAddress) {
 		this.zkAddress = zkAddress;
 	}
 
-    ZooKeeper getZk() {
-		return zk;
-	}
+    @Override
+    public void process(WatchedEvent event) {
+        if (event.getState() == Event.KeeperState.SyncConnected) {
+            //connect()操作需要等待连接真正建立后才能进行后序的操作
+            if (event.getType() == Event.EventType.None && event.getPath() == null) {
+                connectedSignal.countDown();
+            //唤醒正在等待服务消费者线程
+            } else if (event.getType() == Event.EventType.NodeChildrenChanged) {
+                try {
+                    if (waitForAvailable) {
+                        waitForAvailable = false;
+                        availableSignal.countDown();
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
 
     void connect() {
 		try {
 			zk = new ZooKeeper(zkAddress, ZK_SESSION_TIMEOUT, this);
 			connectedSignal.await();
-			LOGGER.info("Successfully connected to " + zkAddress);
+			LOGGER.info("successfully connected to " + zkAddress);
 		} catch (IOException | InterruptedException e) {
-			LOGGER.error("Failed to connect to " + zkAddress);
+			LOGGER.error("fail to connect to " + zkAddress);
 			e.printStackTrace();
 		}
 	}
@@ -42,7 +58,8 @@ public class ZooKeeperManager implements Watcher {
 			if (zk.exists(nodePath, false) == null)
                 zk.create(nodePath, null, ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);;
 		} catch (KeeperException | InterruptedException e) {
-			e.printStackTrace();
+            LOGGER.error("fail to create persistent node " + nodePath);
+            e.printStackTrace();
 		}
 	}
 
@@ -51,6 +68,7 @@ public class ZooKeeperManager implements Watcher {
 			if (zk.exists(nodePath, false) == null)
                 zk.create(nodePath, null, ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL);
 		} catch (KeeperException | InterruptedException e) {
+            LOGGER.error("fail to create ephemeral node " + nodePath);
 			e.printStackTrace();
 		}
 	}
@@ -62,32 +80,35 @@ public class ZooKeeperManager implements Watcher {
 			// 监听若是available则通知阻塞的进程继续
 			children = zk.getChildren(nodePath, true);
 			if (children.size() == 0) {
-				waitForavailable = true;
+				waitForAvailable = true;
 				System.out.println("wait for available server");
 				availableSignal.await();
 				children = zk.getChildren(nodePath, true);
 			}
 
 		} catch (Exception e) {
-			e.printStackTrace();
+            LOGGER.error("fail to list node " + nodePath);
+            e.printStackTrace();
 		}
 		return children;
 	}
 
-	// 删除本节点和其直接子节点,稍后添加彻底遍历版本
-	public void deleteNode(String nodePath) {
+	// 删除本节点和所有子孙节点
+	private void deleteNode(String nodePath) {
 		try {
 			List<String> children = zk.getChildren(nodePath, true);
-			for (String c : children) {
-				zk.delete(nodePath + "/" + c, -1);
-			}
+			if(children!=null)
+                for (String c : children)
+                    deleteNode(nodePath+"/"+c);
+				    //zk.delete(nodePath + "/" + c, -1);
 			zk.delete(nodePath, -1);
 		} catch (Exception e) {
-			e.printStackTrace();
+            LOGGER.error("fail to delete node " + nodePath);
+            e.printStackTrace();
 		}
 	}
 
-	public void closeConnect() {
+	void closeConnect() {
 		try {
 			zk.close();
 		} catch (InterruptedException e) {
@@ -95,22 +116,4 @@ public class ZooKeeperManager implements Watcher {
 		}
 	}
 
-	@Override
-	public void process(WatchedEvent event) {
-		if (event.getState() == Event.KeeperState.SyncConnected) {
-			if (event.getType() == Event.EventType.None && event.getPath() == null) {
-				connectedSignal.countDown();
-			} else if (event.getType() == Event.EventType.NodeChildrenChanged) {
-				try {
-					if (waitForavailable) {
-						waitForavailable = false;
-						availableSignal.countDown();
-					}
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		}
-
-	}
 }
