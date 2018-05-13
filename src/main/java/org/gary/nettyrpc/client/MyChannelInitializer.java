@@ -7,8 +7,8 @@ public class MyChannelInitializer extends ChannelInitializer<SocketChannel> {
 
     private RpcClientHandler rpcClientHandler;
 
-    MyChannelInitializer(RpcClientHandler rpcClientHandler){
-        this.rpcClientHandler=rpcClientHandler;
+    MyChannelInitializer(RpcClientHandler rpcClientHandler) {
+        this.rpcClientHandler = rpcClientHandler;
     }
 
     @Override

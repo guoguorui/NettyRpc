@@ -10,10 +10,10 @@ public class ProxyFactory implements InvocationHandler {
 
     private RpcClient rpcClient;
 
-    <T> T getImplObj(Class<T> serviceClass,String serverAddress) {
-        rpcClient=new RpcClient(serviceClass,serverAddress);
+    <T> T getImplObj(Class<T> serviceClass, String serverAddress) {
+        rpcClient = new RpcClient(serviceClass, serverAddress);
         @SuppressWarnings("unchecked")
-        T implObj = (T) Proxy.newProxyInstance(serviceClass.getClassLoader(), new Class[] { serviceClass }, this);
+        T implObj = (T) Proxy.newProxyInstance(serviceClass.getClassLoader(), new Class[]{serviceClass}, this);
         return implObj;
     }
 
