@@ -14,39 +14,34 @@ public class RpcServerHandler extends ChannelInboundHandlerAdapter {
 	private String implPackage;
 
 	public RpcServerHandler(String implPackage) {
-		super();
 		this.implPackage = implPackage;
 	}
 
 	@Override
 	public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-		// 接收
 		ByteBuf bytebuf = (ByteBuf) msg;
-		byte[] req = new byte[bytebuf.readableBytes()];
-		bytebuf.readBytes(req);
-		RpcRequest cm = SerializeUtils.deserialize(req, RpcRequest.class);
-		System.out.println(cm.getMessage());
-		// class类成员序列化失败,很可能是class本身包含了全局的命名，而在不同项目中的路径不同而序列失败
-		// 将接口共享即可
-
-		// 回应
+		byte[] request = new byte[bytebuf.readableBytes()];
+		bytebuf.readBytes(request);
+		RpcRequest rpcRequest = SerializeUtils.deserialize(request, RpcRequest.class);
+		System.out.println(rpcRequest.getMessage());
+        Class<?> interfaceClass = rpcRequest.getInterfaceClass();
+        Object implObject = ScanImpl.scanType(implPackage, interfaceClass);
+        Method[] methods = implObject.getClass().getDeclaredMethods();
 		RpcResponse rpcResponse = new RpcResponse();
-		Class<?> interfaceClass = cm.getInterfaceClass();
-		Object implObject = ScanImpl.scanType(implPackage, interfaceClass);
-		Method[] methods = implObject.getClass().getDeclaredMethods();
 		for (Method method : methods) {
-			if (method.getName().equals(cm.getMethodName())) {
-				rpcResponse.setResult(invokeMethod(implObject, method.getName(), cm.getArgs()));
+			if (method.getName().equals(rpcRequest.getMethodName())) {
+				rpcResponse.setResult(invokeMethod(implObject, method.getName(), rpcRequest.getArgs()));
+				break;
 			}
 		}
-		byte[] reback = SerializeUtils.serialize(rpcResponse,RpcResponse.class);
+		byte[] response = SerializeUtils.serialize(rpcResponse,RpcResponse.class);
 		bytebuf.clear();
-		bytebuf.writeBytes(reback);
+		bytebuf.writeBytes(response);
 		ctx.writeAndFlush(bytebuf);
 	}
 
-    private static Object invokeMethod(Object newObj, String methodName, Object[] args) throws Exception {
-		Class<?> ownerClass = newObj.getClass();
+    private static Object invokeMethod(Object implObj, String methodName, Object[] args) throws Exception {
+		Class<?> implObjClass = implObj.getClass();
 		Class<?>[] argsClass = null;
 		if (args != null) {
 			argsClass = new Class[args.length];
@@ -54,8 +49,8 @@ public class RpcServerHandler extends ChannelInboundHandlerAdapter {
 				argsClass[i] = args[i].getClass();
 			}
 		}
-		Method method = ownerClass.getMethod(methodName, argsClass);
-		return method.invoke(newObj, args);
+		Method method = implObjClass.getMethod(methodName, argsClass);
+		return method.invoke(implObj, args);
 	}
 
 }
