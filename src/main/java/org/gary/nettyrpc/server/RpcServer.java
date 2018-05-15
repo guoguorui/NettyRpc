@@ -28,7 +28,7 @@ public class RpcServer {
                     }).option(ChannelOption.SO_BACKLOG, 128).childOption(ChannelOption.SO_KEEPALIVE, true);
             ChannelFuture future = bootstrap.bind(new InetSocketAddress(port)).sync();
             ServiceRegister serviceRegister = new ServiceRegister("127.0.0.1:2181");
-            serviceRegister.register("UserService", "127.0.0.1:8888");
+            serviceRegister.register("UserService", "127.0.0.1:"+String.valueOf(port));
             future.channel().closeFuture().sync();
         } catch (Exception e) {
             e.printStackTrace();

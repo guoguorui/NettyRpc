@@ -15,6 +15,7 @@ public class ProxyHandler implements InvocationHandler {
     private RpcClient rpcClient;
     private ServiceDiscover sd;
     private String serviceName;
+    private String serverAddress;
 
     ProxyHandler(String zkAddress){
         sd = new ServiceDiscover(zkAddress);
@@ -23,7 +24,7 @@ public class ProxyHandler implements InvocationHandler {
     @SuppressWarnings("unchecked")
     <T> T getImplObj(Class<T> serviceClass) {
         serviceName=serviceClass.getSimpleName();
-        String serverAddress = sd.discover(serviceName);
+        serverAddress = sd.discover(serviceName,null);
         rpcClient = new RpcClient(serviceClass, serverAddress);
         rpcClient.connect();
         return  (T) Proxy.newProxyInstance(serviceClass.getClassLoader(), new Class[]{serviceClass}, this);
@@ -34,7 +35,9 @@ public class ProxyHandler implements InvocationHandler {
         RpcResponse rpcResponse = rpcClient.call(method, args, id);
         System.out.println("收到回应了：" + id);
         if (rpcResponse.getStatus() == -1) {
-            rpcClient = new RpcClient(rpcClient.getServiceClass(), sd.discover(serviceName));
+            atomicInteger.decrementAndGet();
+            serverAddress=sd.discover(serviceName,serverAddress);
+            rpcClient = new RpcClient(rpcClient.getServiceClass(), serverAddress);
             rpcClient.connect();
             try {
                 return method.invoke(proxy, args);

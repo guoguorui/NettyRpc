@@ -15,7 +15,7 @@ public class ZKManager implements Watcher {
     private String zkAddress;
     private ZooKeeper zk;
     private final CountDownLatch connectedSignal = new CountDownLatch(1);
-    private final CountDownLatch availableSignal = new CountDownLatch(1);
+    private CountDownLatch availableSignal;
     private boolean waitForAvailable = false;
 
     public ZKManager(String zkAddress) {
@@ -75,14 +75,16 @@ public class ZKManager implements Watcher {
     }
 
     // 此方法要求nodePath是完整的,所以要以/origin开始
-    List<String> listChildren(String nodePath) {
+    List<String> listChildren(String nodePath,String exclude) {
         List<String> children = null;
         try {
             // 监听若是available则通知阻塞的进程继续
             children = zk.getChildren(nodePath, true);
-            if (children.size() == 0) {
+            children.remove(exclude);
+            while (children.size() == 0) {
                 waitForAvailable = true;
                 System.out.println("wait for available server");
+                availableSignal = new CountDownLatch(1);
                 availableSignal.await();
                 children = zk.getChildren(nodePath, true);
             }
