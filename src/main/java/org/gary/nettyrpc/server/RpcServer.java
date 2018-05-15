@@ -1,41 +1,11 @@
 package org.gary.nettyrpc.server;
 
-import io.netty.bootstrap.ServerBootstrap;
-import io.netty.channel.ChannelFuture;
-import io.netty.channel.ChannelInitializer;
-import io.netty.channel.ChannelOption;
-import io.netty.channel.EventLoopGroup;
-import io.netty.channel.nio.NioEventLoopGroup;
-import io.netty.channel.socket.SocketChannel;
-import io.netty.channel.socket.nio.NioServerSocketChannel;
-import org.gary.nettyrpc.zookeeper.ServiceRegister;
-
-import java.net.InetSocketAddress;
-
 public class RpcServer {
 
-    public static void processRequest(String implPackage,String zkAddress,int nettyPort) {
-        EventLoopGroup bossGroup = new NioEventLoopGroup();
-        EventLoopGroup workerGroup = new NioEventLoopGroup();
-        try {
-            ServerBootstrap bootstrap = new ServerBootstrap();
-            bootstrap.group(bossGroup, workerGroup).channel(NioServerSocketChannel.class)
-                    .childHandler(new ChannelInitializer<SocketChannel>() {
-                        @Override
-                        protected void initChannel(SocketChannel channel) throws Exception {
-                            channel.pipeline().addLast(new RpcServerHandler(implPackage));
-                        }
-                    }).option(ChannelOption.SO_BACKLOG, 128).childOption(ChannelOption.SO_KEEPALIVE, true);
-            ChannelFuture future = bootstrap.bind(new InetSocketAddress(nettyPort)).sync();
-            ServiceRegister serviceRegister = new ServiceRegister(zkAddress);
-            serviceRegister.register("UserService", "127.0.0.1:"+String.valueOf(nettyPort));
-            future.channel().closeFuture().sync();
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            bossGroup.shutdownGracefully();
-            workerGroup.shutdownGracefully();
-        }
+    public static void provideService(String implPackage, String zkAddress,int nettyPort) {
+        String packageName = NettyServer.class.getPackage().getName();
+        packageName = packageName.substring(0, packageName.lastIndexOf('.'));
+        NettyServer.processRequest(packageName + "." + implPackage, zkAddress, nettyPort);
     }
 
 }

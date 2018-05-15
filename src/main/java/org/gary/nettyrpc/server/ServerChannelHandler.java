@@ -9,11 +9,11 @@ import org.gary.nettyrpc.common.SerializeUtils;
 
 import java.lang.reflect.Method;
 
-public class RpcServerHandler extends ChannelInboundHandlerAdapter {
+public class ServerChannelHandler extends ChannelInboundHandlerAdapter {
 
     private String implPackage;
 
-    public RpcServerHandler(String implPackage) {
+    public ServerChannelHandler(String implPackage) {
         this.implPackage = implPackage;
     }
 
@@ -23,7 +23,6 @@ public class RpcServerHandler extends ChannelInboundHandlerAdapter {
         byte[] request = new byte[bytebuf.readableBytes()];
         bytebuf.readBytes(request);
         RpcRequest rpcRequest = SerializeUtils.deserialize(request, RpcRequest.class);
-        System.out.println(rpcRequest.getMessage());
         Class<?> interfaceClass = rpcRequest.getInterfaceClass();
         Object implObject = ScanImpl.scanType(implPackage, interfaceClass);
         Method[] methods = implObject.getClass().getDeclaredMethods();
@@ -34,7 +33,9 @@ public class RpcServerHandler extends ChannelInboundHandlerAdapter {
                 break;
             }
         }
-        rpcResponse.setId(rpcRequest.getId());
+        int id=rpcRequest.getId();
+        rpcResponse.setId(id);
+        System.out.println("处理完请求："+id);
         byte[] response = SerializeUtils.serialize(rpcResponse, RpcResponse.class);
         bytebuf.clear();
         bytebuf.writeBytes(response);

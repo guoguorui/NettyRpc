@@ -11,7 +11,7 @@ import org.gary.nettyrpc.common.SerializeUtils;
 import java.util.HashMap;
 import java.util.concurrent.CountDownLatch;
 
-public class RpcClientHandler extends ChannelInboundHandlerAdapter {
+public class ClientChannelHandler extends ChannelInboundHandlerAdapter {
 
     private HashMap<Integer,CountDownLatch> idToSignal =new HashMap<>();
     HashMap<Integer,RpcResponse> idToResult =new HashMap<>();

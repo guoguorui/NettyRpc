@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class ProxyHandler implements InvocationHandler {
 
     private static AtomicInteger atomicInteger = new AtomicInteger(0);
-    private RpcClient rpcClient;
+    private NettyClient nettyClient;
     private ServiceDiscover sd;
     private String serviceName;
     private String serverAddress;
@@ -24,20 +24,20 @@ public class ProxyHandler implements InvocationHandler {
     <T> T getImplObj(Class<T> serviceClass) {
         serviceName=serviceClass.getSimpleName();
         serverAddress = sd.discover(serviceName,null);
-        rpcClient = new RpcClient(serviceClass, serverAddress);
-        rpcClient.connect();
+        nettyClient = new NettyClient(serviceClass, serverAddress);
+        nettyClient.connect();
         return  (T) Proxy.newProxyInstance(serviceClass.getClassLoader(), new Class[]{serviceClass}, this);
     }
 
     public Object invoke(Object proxy, Method method, Object[] args) {
         int id = atomicInteger.addAndGet(1);
-        RpcResponse rpcResponse = rpcClient.call(method, args, id);
+        RpcResponse rpcResponse = nettyClient.call(method, args, id);
         System.out.println("收到回应了  ：" + rpcResponse.getId());
         if (rpcResponse.getStatus() == -1) {
             atomicInteger.decrementAndGet();
             serverAddress=sd.discover(serviceName,serverAddress);
-            rpcClient = new RpcClient(rpcClient.getServiceClass(), serverAddress);
-            rpcClient.connect();
+            nettyClient = new NettyClient(nettyClient.getServiceClass(), serverAddress);
+            nettyClient.connect();
             try {
                 return method.invoke(proxy, args);
             } catch (Exception e) {

@@ -1,12 +1,10 @@
 package org.gary.nettyrpc.test;
 
 import org.gary.nettyrpc.server.RpcServer;
-import org.gary.nettyrpc.server.Server;
-import org.gary.nettyrpc.zookeeper.ServiceRegister;
 
 public class ServerTest2 {
 
     public static void main(String[] args) {
-        Server.provideService("serviceimpl","127.0.0.1:2181",9999);
+        RpcServer.provideService("serviceimpl","127.0.0.1:2181",9999);
     }
 }

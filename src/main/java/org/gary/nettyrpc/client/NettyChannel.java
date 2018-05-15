@@ -12,16 +12,16 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 import java.net.InetSocketAddress;
 
 
-class ConnectThread extends Thread{
+class NettyChannel extends Thread{
 
-    private RpcClientHandler rpcClientHandler;
+    private ClientChannelHandler clientChannelHandler;
     private String serverAddress;
-    private RpcClient rpcClient;
+    private NettyClient nettyClient;
 
-    ConnectThread(RpcClientHandler rpcClientHandler,String serverAddress,RpcClient rpcClient){
-        this.rpcClientHandler=rpcClientHandler;
+    NettyChannel(NettyClient nettyClient, ClientChannelHandler clientChannelHandler, String serverAddress){
+        this.clientChannelHandler = clientChannelHandler;
         this.serverAddress=serverAddress;
-        this.rpcClient=rpcClient;
+        this.nettyClient = nettyClient;
     }
 
     @Override
@@ -35,7 +35,7 @@ class ConnectThread extends Thread{
                     handler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         protected void initChannel(SocketChannel ch) throws Exception {
-                            ch.pipeline().addLast(rpcClientHandler);
+                            ch.pipeline().addLast(clientChannelHandler);
                         }
                     }).
                     option(ChannelOption.SO_KEEPALIVE, true);
@@ -43,13 +43,13 @@ class ConnectThread extends Thread{
             String host = addresses[0];
             int port = Integer.parseInt(addresses[1]);
             ChannelFuture future = bootstrap.connect(new InetSocketAddress(host, port)).sync();
-            rpcClient.setConnected(1);
+            nettyClient.setConnected(1);
             future.channel().closeFuture().sync();
         } catch (InterruptedException e) {
             //e.printStackTrace();
         } finally {
             System.out.println("与服务器断开连接："+serverAddress);
-            rpcClient.setConnected(-1);
+            nettyClient.setConnected(-1);
             group.shutdownGracefully();
         }
     }
