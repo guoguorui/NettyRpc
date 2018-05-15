@@ -14,7 +14,7 @@ import java.net.InetSocketAddress;
 
 public class RpcServer {
 
-    public static void processRequest(String implPackage,int port) {
+    public static void processRequest(String implPackage,String zkAddress,int nettyPort) {
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
         try {
@@ -26,9 +26,9 @@ public class RpcServer {
                             channel.pipeline().addLast(new RpcServerHandler(implPackage));
                         }
                     }).option(ChannelOption.SO_BACKLOG, 128).childOption(ChannelOption.SO_KEEPALIVE, true);
-            ChannelFuture future = bootstrap.bind(new InetSocketAddress(port)).sync();
-            ServiceRegister serviceRegister = new ServiceRegister("127.0.0.1:2181");
-            serviceRegister.register("UserService", "127.0.0.1:"+String.valueOf(port));
+            ChannelFuture future = bootstrap.bind(new InetSocketAddress(nettyPort)).sync();
+            ServiceRegister serviceRegister = new ServiceRegister(zkAddress);
+            serviceRegister.register("UserService", "127.0.0.1:"+String.valueOf(nettyPort));
             future.channel().closeFuture().sync();
         } catch (Exception e) {
             e.printStackTrace();

@@ -8,7 +8,6 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.concurrent.atomic.AtomicInteger;
 
-//解决zk延时问题，服务器实际上已经断开，但仍被发现
 public class ProxyHandler implements InvocationHandler {
 
     private static AtomicInteger atomicInteger = new AtomicInteger(0);
@@ -33,7 +32,7 @@ public class ProxyHandler implements InvocationHandler {
     public Object invoke(Object proxy, Method method, Object[] args) {
         int id = atomicInteger.addAndGet(1);
         RpcResponse rpcResponse = rpcClient.call(method, args, id);
-        System.out.println("收到回应了：" + id);
+        System.out.println("收到回应了  ：" + rpcResponse.getId());
         if (rpcResponse.getStatus() == -1) {
             atomicInteger.decrementAndGet();
             serverAddress=sd.discover(serviceName,serverAddress);

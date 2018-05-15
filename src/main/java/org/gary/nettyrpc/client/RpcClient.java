@@ -30,7 +30,7 @@ class RpcClient {
 
     void connect(){
         rpcClientHandler = new RpcClientHandler();
-        System.out.println("尝试与服务器相连:"+serverAddress);
+        System.out.println("与服务器建立连接:"+serverAddress);
         ConnectThread connectThread=new ConnectThread(rpcClientHandler,serverAddress,this);
         connectThread.start();
     }
@@ -59,7 +59,8 @@ class RpcClient {
 
     private RpcResponse getErrorResponse(){
         RpcResponse rpcResponse=new RpcResponse();
-        rpcResponse.setStatus(-1);;
+        rpcResponse.setStatus(-1);
+        rpcResponse.setId(-1);
         return rpcResponse;
     }
 

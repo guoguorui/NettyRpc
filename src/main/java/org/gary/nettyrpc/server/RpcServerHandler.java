@@ -56,6 +56,7 @@ public class RpcServerHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+        System.out.println("客户端断开了连接");
         ctx.close();
     }
 }
