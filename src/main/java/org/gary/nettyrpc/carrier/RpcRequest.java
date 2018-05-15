@@ -9,6 +9,7 @@ public class RpcRequest implements Serializable {
     private String methodName;
     private Class<?> interfaceClass;
     private Object[] args;
+    private int id;
 
     public Object[] getArgs() {
         return args;
@@ -40,5 +41,13 @@ public class RpcRequest implements Serializable {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

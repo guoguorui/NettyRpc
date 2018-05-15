@@ -12,8 +12,16 @@ public class ClientTest {
 			System.out.println(helloService.hello());
 		}*/
         UserService userInterface = Client.getImpl(UserService.class, "127.0.0.1:2181");
-        User user = userInterface.getUser();
-        System.out.println("泪流满面: " + user.getName());
-        System.out.println("泪流满面: " + user.getPassword());
+        for(int i=0;i<10;i++){
+            User user = userInterface.getUser();
+            System.out.println("泪流满面: " + user.getName());
+            System.out.println("泪流满面: " + user.getPassword());
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
     }
 }

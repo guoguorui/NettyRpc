@@ -13,7 +13,7 @@ import java.net.InetSocketAddress;
 
 public class RpcServer {
 
-    public static void processRequest(String implPackage) {
+    public static void processRequest(String implPackage,int port) {
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
         try {
@@ -25,7 +25,7 @@ public class RpcServer {
                             channel.pipeline().addLast(new RpcServerHandler(implPackage));
                         }
                     }).option(ChannelOption.SO_BACKLOG, 128).childOption(ChannelOption.SO_KEEPALIVE, true);
-            ChannelFuture future = bootstrap.bind(new InetSocketAddress(8888)).sync();
+            ChannelFuture future = bootstrap.bind(new InetSocketAddress(port)).sync();
             future.channel().closeFuture().sync();
         } catch (Exception e) {
             e.printStackTrace();

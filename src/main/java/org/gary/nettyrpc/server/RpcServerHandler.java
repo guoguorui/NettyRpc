@@ -34,6 +34,7 @@ public class RpcServerHandler extends ChannelInboundHandlerAdapter {
                 break;
             }
         }
+        rpcResponse.setId(rpcRequest.getId());
         byte[] response = SerializeUtils.serialize(rpcResponse, RpcResponse.class);
         bytebuf.clear();
         bytebuf.writeBytes(response);
@@ -53,4 +54,8 @@ public class RpcServerHandler extends ChannelInboundHandlerAdapter {
         return method.invoke(implObj, args);
     }
 
+    @Override
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+        ctx.close();
+    }
 }

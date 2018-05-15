@@ -8,21 +8,27 @@ import org.gary.nettyrpc.carrier.RpcRequest;
 import org.gary.nettyrpc.carrier.RpcResponse;
 import org.gary.nettyrpc.common.SerializeUtils;
 
-//处理完从服务器收到的字节被译码通道转换成了RpcResponse,在channelRead0的参数中
+import java.util.HashMap;
+import java.util.concurrent.CountDownLatch;
+
 public class RpcClientHandler extends ChannelInboundHandlerAdapter {
 
-    private ByteBuf clientMessage;
-    RpcResponse rpcResponse;
+    private HashMap<Integer,CountDownLatch> idToSignal =new HashMap<>();
+    HashMap<Integer,RpcResponse> idToResult =new HashMap<>();
+    private ChannelHandlerContext ctx;
 
-    RpcClientHandler(RpcRequest rpcRequest) {
+    void sendRpcRequest(RpcRequest rpcRequest,CountDownLatch countDownLatch){
+        idToSignal.put(rpcRequest.getId(),countDownLatch);
         byte[] request = SerializeUtils.serialize(rpcRequest, RpcRequest.class);
-        clientMessage = Unpooled.buffer(request.length);
+        ByteBuf clientMessage = Unpooled.buffer(request.length);
         clientMessage.writeBytes(request);
+        ctx.writeAndFlush(clientMessage);
+        System.out.println("请求发出去了："+rpcRequest.getId());
     }
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
-        ctx.writeAndFlush(clientMessage);
+        this.ctx=ctx;
     }
 
     @Override
@@ -30,8 +36,10 @@ public class RpcClientHandler extends ChannelInboundHandlerAdapter {
         ByteBuf buf = (ByteBuf) msg;
         byte[] response = new byte[buf.readableBytes()];
         buf.readBytes(response);
-        rpcResponse = SerializeUtils.deserialize(response, RpcResponse.class);
-        ctx.close().sync();
+        RpcResponse rpcResponse = SerializeUtils.deserialize(response, RpcResponse.class);
+        idToResult.put(rpcResponse.getId(),rpcResponse);
+        CountDownLatch countDownLatch= idToSignal.get(rpcResponse.getId());
+        countDownLatch.countDown();
     }
 
     @Override
