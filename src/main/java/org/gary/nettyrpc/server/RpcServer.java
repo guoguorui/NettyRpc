@@ -8,6 +8,7 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import org.gary.nettyrpc.zookeeper.ServiceRegister;
 
 import java.net.InetSocketAddress;
 
@@ -26,6 +27,8 @@ public class RpcServer {
                         }
                     }).option(ChannelOption.SO_BACKLOG, 128).childOption(ChannelOption.SO_KEEPALIVE, true);
             ChannelFuture future = bootstrap.bind(new InetSocketAddress(port)).sync();
+            ServiceRegister serviceRegister = new ServiceRegister("127.0.0.1:2181");
+            serviceRegister.register("UserService", "127.0.0.1:8888");
             future.channel().closeFuture().sync();
         } catch (Exception e) {
             e.printStackTrace();

@@ -19561,3 +19561,831 @@ Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0
 [INFO ]-[05-15 22:13:59]-[method:org.gary.nettyrpc.zookeeper.ZKManager.connect(ZKManager.java:49)]
 successfully connected to 127.0.0.1:2181
 
+[INFO ]-[05-15 22:14:05]-[method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)]
+Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=5000 watcher=org.gary.nettyrpc.zookeeper.ZKManager@5a2e4553
+
+[INFO ]-[05-15 22:14:05]-[method:org.gary.nettyrpc.zookeeper.ZKManager.connect(ZKManager.java:49)]
+successfully connected to 127.0.0.1:2181
+
+[INFO ]-[05-15 22:14:05]-[method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:975)]
+Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+
+[INFO ]-[05-15 22:14:05]-[method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:852)]
+Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+
+[WARN ]-[05-15 22:14:05]-[method:org.apache.zookeeper.ClientCnxnSocket.readConnectResult(ClientCnxnSocket.java:139)]
+Connected to an old server; r-o mode will be unavailable
+
+[INFO ]-[05-15 22:14:05]-[method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1235)]
+Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x163631b8a440055, negotiated timeout = 5000
+
+[INFO ]-[05-15 22:14:05]-[method:org.apache.zookeeper.ZooKeeper.close(ZooKeeper.java:684)]
+Session: 0x163631b8a440055 closed
+
+[INFO ]-[05-15 22:14:05]-[method:org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:512)]
+EventThread shut down
+
+[INFO ]-[05-15 22:17:35]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+
+[INFO ]-[05-15 22:17:35]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:host.name=GGR-PC
+
+[INFO ]-[05-15 22:17:35]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.version=1.8.0_144
+
+[INFO ]-[05-15 22:17:35]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.vendor=Oracle Corporation
+
+[INFO ]-[05-15 22:17:35]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.home=C:\Program Files\Java\jdk1.8.0_144\jre
+
+[INFO ]-[05-15 22:17:35]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.class.path=C:\Program Files\Java\jdk1.8.0_144\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jline-2.12.1.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\rt.jar;E:\ideaProject\githubProject\NettyRpc\target\test-classes;E:\ideaProject\githubProject\NettyRpc\target\classes;C:\Users\GGR\.m2\repository\io\netty\netty-all\4.0.24.Final\netty-all-4.0.24.Final.jar;C:\Users\GGR\.m2\repository\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;C:\Users\GGR\.m2\repository\org\slf4j\slf4j-api\1.6.1\slf4j-api-1.6.1.jar;C:\Users\GGR\.m2\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;C:\Users\GGR\.m2\repository\log4j\log4j\1.2.16\log4j-1.2.16.jar;C:\Users\GGR\.m2\repository\jline\jline\0.9.94\jline-0.9.94.jar;C:\Users\GGR\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;C:\Users\GGR\.m2\repository\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;C:\Users\GGR\.m2\repository\org\gary\nettyrpc-service\1.0-SNAPSHOT\nettyrpc-service-1.0-SNAPSHOT.jar;C:\Users\GGR\.m2\repository\org\gary\nettyrpc-pojo\1.0-SNAPSHOT\nettyrpc-pojo-1.0-SNAPSHOT.jar;C:\Users\GGR\.m2\repository\com\dyuproject\protostuff\protostuff-core\1.0.8\protostuff-core-1.0.8.jar;C:\Users\GGR\.m2\repository\com\dyuproject\protostuff\protostuff-api\1.0.8\protostuff-api-1.0.8.jar;C:\Users\GGR\.m2\repository\com\dyuproject\protostuff\protostuff-runtime\1.0.8\protostuff-runtime-1.0.8.jar;C:\Users\GGR\.m2\repository\com\dyuproject\protostuff\protostuff-collectionschema\1.0.8\protostuff-collectionschema-1.0.8.jar;D:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2017.2.2\lib\idea_rt.jar
+
+[INFO ]-[05-15 22:17:35]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.library.path=C:\Program Files\Java\jdk1.8.0_144\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;D:\Program Files\mysql-5.6.37-winx64\bin;D:\Program Files\Python2.7;D:\Program Files\Python2.7\Scripts;D:\Program Files (x86)\Mozilla Firefox;C:\Program Files\Java\jdk1.8.0_144\bin;C:\Program Files\Java\jdk1.8.0_144\jre\bin;..;.;C:\Program Files\Java\jdk1.8.0_144\lib\dt.jar;C:\Program Files\Java\jdk1.8.0_144\lib\tools.jar;;D:\Program Files\gradle-4.1\bin;D:\Program Files\apache-maven-3.5.0\bin;D:\Program Files\MongoDB\Server\3.4\bin;D:\Program Files\Git\cmd;D:\Program Files\MATLAB\R2016a\bin;;.
+
+[INFO ]-[05-15 22:17:35]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.io.tmpdir=C:\Users\GGR\AppData\Local\Temp\
+
+[INFO ]-[05-15 22:17:35]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.compiler=<NA>
+
+[INFO ]-[05-15 22:17:35]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.name=Windows 7
+
+[INFO ]-[05-15 22:17:35]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.arch=amd64
+
+[INFO ]-[05-15 22:17:35]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.version=6.1
+
+[INFO ]-[05-15 22:17:35]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.name=GGR
+
+[INFO ]-[05-15 22:17:35]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.home=C:\Users\GGR
+
+[INFO ]-[05-15 22:17:35]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.dir=E:\ideaProject\githubProject\NettyRpc
+
+[INFO ]-[05-15 22:17:35]-[method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)]
+Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=5000 watcher=org.gary.nettyrpc.zookeeper.ZKManager@5a2e4553
+
+[INFO ]-[05-15 22:17:37]-[method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:975)]
+Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+
+[INFO ]-[05-15 22:17:37]-[method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:852)]
+Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+
+[WARN ]-[05-15 22:17:38]-[method:org.apache.zookeeper.ClientCnxnSocket.readConnectResult(ClientCnxnSocket.java:139)]
+Connected to an old server; r-o mode will be unavailable
+
+[INFO ]-[05-15 22:17:38]-[method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1235)]
+Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x163631b8a440056, negotiated timeout = 5000
+
+[INFO ]-[05-15 22:17:38]-[method:org.gary.nettyrpc.zookeeper.ZKManager.connect(ZKManager.java:49)]
+successfully connected to 127.0.0.1:2181
+
+[INFO ]-[05-15 22:17:42]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+
+[INFO ]-[05-15 22:17:42]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:host.name=GGR-PC
+
+[INFO ]-[05-15 22:17:42]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.version=1.8.0_144
+
+[INFO ]-[05-15 22:17:42]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.vendor=Oracle Corporation
+
+[INFO ]-[05-15 22:17:42]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.home=C:\Program Files\Java\jdk1.8.0_144\jre
+
+[INFO ]-[05-15 22:17:42]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.class.path=C:\Program Files\Java\jdk1.8.0_144\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jline-2.12.1.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\rt.jar;E:\ideaProject\githubProject\NettyRpc\target\test-classes;E:\ideaProject\githubProject\NettyRpc\target\classes;C:\Users\GGR\.m2\repository\io\netty\netty-all\4.0.24.Final\netty-all-4.0.24.Final.jar;C:\Users\GGR\.m2\repository\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;C:\Users\GGR\.m2\repository\org\slf4j\slf4j-api\1.6.1\slf4j-api-1.6.1.jar;C:\Users\GGR\.m2\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;C:\Users\GGR\.m2\repository\log4j\log4j\1.2.16\log4j-1.2.16.jar;C:\Users\GGR\.m2\repository\jline\jline\0.9.94\jline-0.9.94.jar;C:\Users\GGR\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;C:\Users\GGR\.m2\repository\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;C:\Users\GGR\.m2\repository\org\gary\nettyrpc-service\1.0-SNAPSHOT\nettyrpc-service-1.0-SNAPSHOT.jar;C:\Users\GGR\.m2\repository\org\gary\nettyrpc-pojo\1.0-SNAPSHOT\nettyrpc-pojo-1.0-SNAPSHOT.jar;C:\Users\GGR\.m2\repository\com\dyuproject\protostuff\protostuff-core\1.0.8\protostuff-core-1.0.8.jar;C:\Users\GGR\.m2\repository\com\dyuproject\protostuff\protostuff-api\1.0.8\protostuff-api-1.0.8.jar;C:\Users\GGR\.m2\repository\com\dyuproject\protostuff\protostuff-runtime\1.0.8\protostuff-runtime-1.0.8.jar;C:\Users\GGR\.m2\repository\com\dyuproject\protostuff\protostuff-collectionschema\1.0.8\protostuff-collectionschema-1.0.8.jar;D:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2017.2.2\lib\idea_rt.jar
+
+[INFO ]-[05-15 22:17:42]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.library.path=C:\Program Files\Java\jdk1.8.0_144\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;D:\Program Files\mysql-5.6.37-winx64\bin;D:\Program Files\Python2.7;D:\Program Files\Python2.7\Scripts;D:\Program Files (x86)\Mozilla Firefox;C:\Program Files\Java\jdk1.8.0_144\bin;C:\Program Files\Java\jdk1.8.0_144\jre\bin;..;.;C:\Program Files\Java\jdk1.8.0_144\lib\dt.jar;C:\Program Files\Java\jdk1.8.0_144\lib\tools.jar;;D:\Program Files\gradle-4.1\bin;D:\Program Files\apache-maven-3.5.0\bin;D:\Program Files\MongoDB\Server\3.4\bin;D:\Program Files\Git\cmd;D:\Program Files\MATLAB\R2016a\bin;;.
+
+[INFO ]-[05-15 22:17:42]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.io.tmpdir=C:\Users\GGR\AppData\Local\Temp\
+
+[INFO ]-[05-15 22:17:42]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.compiler=<NA>
+
+[INFO ]-[05-15 22:17:42]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.name=Windows 7
+
+[INFO ]-[05-15 22:17:42]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.arch=amd64
+
+[INFO ]-[05-15 22:17:42]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.version=6.1
+
+[INFO ]-[05-15 22:17:42]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.name=GGR
+
+[INFO ]-[05-15 22:17:42]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.home=C:\Users\GGR
+
+[INFO ]-[05-15 22:17:42]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.dir=E:\ideaProject\githubProject\NettyRpc
+
+[INFO ]-[05-15 22:17:42]-[method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)]
+Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=5000 watcher=org.gary.nettyrpc.zookeeper.ZKManager@5ef04b5
+
+[INFO ]-[05-15 22:17:44]-[method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:975)]
+Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+
+[INFO ]-[05-15 22:17:44]-[method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:852)]
+Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+
+[WARN ]-[05-15 22:17:44]-[method:org.apache.zookeeper.ClientCnxnSocket.readConnectResult(ClientCnxnSocket.java:139)]
+Connected to an old server; r-o mode will be unavailable
+
+[INFO ]-[05-15 22:17:44]-[method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1235)]
+Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x163631b8a440057, negotiated timeout = 5000
+
+[INFO ]-[05-15 22:17:44]-[method:org.gary.nettyrpc.zookeeper.ZKManager.connect(ZKManager.java:49)]
+successfully connected to 127.0.0.1:2181
+
+[INFO ]-[05-15 22:17:44]-[method:org.apache.zookeeper.ZooKeeper.close(ZooKeeper.java:684)]
+Session: 0x163631b8a440056 closed
+
+[INFO ]-[05-15 22:17:44]-[method:org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:512)]
+EventThread shut down
+
+[INFO ]-[05-15 22:17:45]-[method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)]
+Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=5000 watcher=org.gary.nettyrpc.zookeeper.ZKManager@5a2e4553
+
+[INFO ]-[05-15 22:17:45]-[method:org.gary.nettyrpc.zookeeper.ZKManager.connect(ZKManager.java:49)]
+successfully connected to 127.0.0.1:2181
+
+[INFO ]-[05-15 22:17:45]-[method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:975)]
+Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+
+[INFO ]-[05-15 22:17:45]-[method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:852)]
+Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+
+[WARN ]-[05-15 22:17:46]-[method:org.apache.zookeeper.ClientCnxnSocket.readConnectResult(ClientCnxnSocket.java:139)]
+Connected to an old server; r-o mode will be unavailable
+
+[INFO ]-[05-15 22:17:46]-[method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1235)]
+Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x163631b8a440058, negotiated timeout = 5000
+
+[INFO ]-[05-15 22:17:46]-[method:org.apache.zookeeper.ZooKeeper.close(ZooKeeper.java:684)]
+Session: 0x163631b8a440058 closed
+
+[INFO ]-[05-15 22:17:46]-[method:org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:512)]
+EventThread shut down
+
+[INFO ]-[05-15 22:17:58]-[method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)]
+Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=5000 watcher=org.gary.nettyrpc.zookeeper.ZKManager@5a2e4553
+
+[INFO ]-[05-15 22:17:58]-[method:org.gary.nettyrpc.zookeeper.ZKManager.connect(ZKManager.java:49)]
+successfully connected to 127.0.0.1:2181
+
+[INFO ]-[05-15 22:17:58]-[method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:975)]
+Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+
+[INFO ]-[05-15 22:17:58]-[method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:852)]
+Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+
+[WARN ]-[05-15 22:17:59]-[method:org.apache.zookeeper.ClientCnxnSocket.readConnectResult(ClientCnxnSocket.java:139)]
+Connected to an old server; r-o mode will be unavailable
+
+[INFO ]-[05-15 22:17:59]-[method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1235)]
+Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x163631b8a440059, negotiated timeout = 5000
+
+[INFO ]-[05-15 22:17:59]-[method:org.apache.zookeeper.ZooKeeper.close(ZooKeeper.java:684)]
+Session: 0x163631b8a440059 closed
+
+[INFO ]-[05-15 22:17:59]-[method:org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:512)]
+EventThread shut down
+
+[INFO ]-[05-15 22:18:00]-[method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)]
+Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=5000 watcher=org.gary.nettyrpc.zookeeper.ZKManager@5a2e4553
+
+[INFO ]-[05-15 22:18:00]-[method:org.gary.nettyrpc.zookeeper.ZKManager.connect(ZKManager.java:49)]
+successfully connected to 127.0.0.1:2181
+
+[INFO ]-[05-15 22:18:00]-[method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:975)]
+Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+
+[INFO ]-[05-15 22:18:00]-[method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:852)]
+Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+
+[WARN ]-[05-15 22:18:00]-[method:org.apache.zookeeper.ClientCnxnSocket.readConnectResult(ClientCnxnSocket.java:139)]
+Connected to an old server; r-o mode will be unavailable
+
+[INFO ]-[05-15 22:18:00]-[method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1235)]
+Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x163631b8a44005a, negotiated timeout = 5000
+
+[INFO ]-[05-15 22:18:00]-[method:org.apache.zookeeper.ZooKeeper.close(ZooKeeper.java:684)]
+Session: 0x163631b8a44005a closed
+
+[INFO ]-[05-15 22:18:00]-[method:org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:512)]
+EventThread shut down
+
+[INFO ]-[05-15 22:18:01]-[method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)]
+Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=5000 watcher=org.gary.nettyrpc.zookeeper.ZKManager@5a2e4553
+
+[INFO ]-[05-15 22:18:01]-[method:org.gary.nettyrpc.zookeeper.ZKManager.connect(ZKManager.java:49)]
+successfully connected to 127.0.0.1:2181
+
+[INFO ]-[05-15 22:18:01]-[method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:975)]
+Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+
+[INFO ]-[05-15 22:18:01]-[method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:852)]
+Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+
+[WARN ]-[05-15 22:18:01]-[method:org.apache.zookeeper.ClientCnxnSocket.readConnectResult(ClientCnxnSocket.java:139)]
+Connected to an old server; r-o mode will be unavailable
+
+[INFO ]-[05-15 22:18:01]-[method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1235)]
+Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x163631b8a44005b, negotiated timeout = 5000
+
+[INFO ]-[05-15 22:18:01]-[method:org.apache.zookeeper.ZooKeeper.close(ZooKeeper.java:684)]
+Session: 0x163631b8a44005b closed
+
+[INFO ]-[05-15 22:18:01]-[method:org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:512)]
+EventThread shut down
+
+[INFO ]-[05-15 22:18:02]-[method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)]
+Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=5000 watcher=org.gary.nettyrpc.zookeeper.ZKManager@5a2e4553
+
+[INFO ]-[05-15 22:18:02]-[method:org.gary.nettyrpc.zookeeper.ZKManager.connect(ZKManager.java:49)]
+successfully connected to 127.0.0.1:2181
+
+[INFO ]-[05-15 22:18:02]-[method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:975)]
+Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+
+[INFO ]-[05-15 22:18:02]-[method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:852)]
+Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+
+[WARN ]-[05-15 22:18:02]-[method:org.apache.zookeeper.ClientCnxnSocket.readConnectResult(ClientCnxnSocket.java:139)]
+Connected to an old server; r-o mode will be unavailable
+
+[INFO ]-[05-15 22:18:02]-[method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1235)]
+Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x163631b8a44005c, negotiated timeout = 5000
+
+[INFO ]-[05-15 22:18:02]-[method:org.apache.zookeeper.ZooKeeper.close(ZooKeeper.java:684)]
+Session: 0x163631b8a44005c closed
+
+[INFO ]-[05-15 22:18:02]-[method:org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:512)]
+EventThread shut down
+
+[INFO ]-[05-15 22:18:03]-[method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)]
+Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=5000 watcher=org.gary.nettyrpc.zookeeper.ZKManager@5a2e4553
+
+[INFO ]-[05-15 22:18:03]-[method:org.gary.nettyrpc.zookeeper.ZKManager.connect(ZKManager.java:49)]
+successfully connected to 127.0.0.1:2181
+
+[INFO ]-[05-15 22:18:03]-[method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:975)]
+Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+
+[INFO ]-[05-15 22:18:03]-[method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:852)]
+Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+
+[WARN ]-[05-15 22:18:03]-[method:org.apache.zookeeper.ClientCnxnSocket.readConnectResult(ClientCnxnSocket.java:139)]
+Connected to an old server; r-o mode will be unavailable
+
+[INFO ]-[05-15 22:18:03]-[method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1235)]
+Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x163631b8a44005d, negotiated timeout = 5000
+
+[INFO ]-[05-15 22:18:03]-[method:org.apache.zookeeper.ZooKeeper.close(ZooKeeper.java:684)]
+Session: 0x163631b8a44005d closed
+
+[INFO ]-[05-15 22:18:03]-[method:org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:512)]
+EventThread shut down
+
+[INFO ]-[05-15 22:18:04]-[method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)]
+Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=5000 watcher=org.gary.nettyrpc.zookeeper.ZKManager@5a2e4553
+
+[INFO ]-[05-15 22:18:04]-[method:org.gary.nettyrpc.zookeeper.ZKManager.connect(ZKManager.java:49)]
+successfully connected to 127.0.0.1:2181
+
+[INFO ]-[05-15 22:18:04]-[method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:975)]
+Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+
+[INFO ]-[05-15 22:18:04]-[method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:852)]
+Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+
+[WARN ]-[05-15 22:18:04]-[method:org.apache.zookeeper.ClientCnxnSocket.readConnectResult(ClientCnxnSocket.java:139)]
+Connected to an old server; r-o mode will be unavailable
+
+[INFO ]-[05-15 22:18:04]-[method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1235)]
+Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x163631b8a44005e, negotiated timeout = 5000
+
+[INFO ]-[05-15 22:24:57]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+
+[INFO ]-[05-15 22:24:57]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:host.name=GGR-PC
+
+[INFO ]-[05-15 22:24:57]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.version=1.8.0_144
+
+[INFO ]-[05-15 22:24:57]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.vendor=Oracle Corporation
+
+[INFO ]-[05-15 22:24:57]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.home=C:\Program Files\Java\jdk1.8.0_144\jre
+
+[INFO ]-[05-15 22:24:57]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.class.path=C:\Program Files\Java\jdk1.8.0_144\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jline-2.12.1.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\rt.jar;E:\ideaProject\githubProject\NettyRpc\target\test-classes;E:\ideaProject\githubProject\NettyRpc\target\classes;C:\Users\GGR\.m2\repository\io\netty\netty-all\4.0.24.Final\netty-all-4.0.24.Final.jar;C:\Users\GGR\.m2\repository\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;C:\Users\GGR\.m2\repository\org\slf4j\slf4j-api\1.6.1\slf4j-api-1.6.1.jar;C:\Users\GGR\.m2\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;C:\Users\GGR\.m2\repository\log4j\log4j\1.2.16\log4j-1.2.16.jar;C:\Users\GGR\.m2\repository\jline\jline\0.9.94\jline-0.9.94.jar;C:\Users\GGR\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;C:\Users\GGR\.m2\repository\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;C:\Users\GGR\.m2\repository\org\gary\nettyrpc-service\1.0-SNAPSHOT\nettyrpc-service-1.0-SNAPSHOT.jar;C:\Users\GGR\.m2\repository\org\gary\nettyrpc-pojo\1.0-SNAPSHOT\nettyrpc-pojo-1.0-SNAPSHOT.jar;C:\Users\GGR\.m2\repository\com\dyuproject\protostuff\protostuff-core\1.0.8\protostuff-core-1.0.8.jar;C:\Users\GGR\.m2\repository\com\dyuproject\protostuff\protostuff-api\1.0.8\protostuff-api-1.0.8.jar;C:\Users\GGR\.m2\repository\com\dyuproject\protostuff\protostuff-runtime\1.0.8\protostuff-runtime-1.0.8.jar;C:\Users\GGR\.m2\repository\com\dyuproject\protostuff\protostuff-collectionschema\1.0.8\protostuff-collectionschema-1.0.8.jar;D:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2017.2.2\lib\idea_rt.jar
+
+[INFO ]-[05-15 22:24:57]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.library.path=C:\Program Files\Java\jdk1.8.0_144\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;D:\Program Files\mysql-5.6.37-winx64\bin;D:\Program Files\Python2.7;D:\Program Files\Python2.7\Scripts;D:\Program Files (x86)\Mozilla Firefox;C:\Program Files\Java\jdk1.8.0_144\bin;C:\Program Files\Java\jdk1.8.0_144\jre\bin;..;.;C:\Program Files\Java\jdk1.8.0_144\lib\dt.jar;C:\Program Files\Java\jdk1.8.0_144\lib\tools.jar;;D:\Program Files\gradle-4.1\bin;D:\Program Files\apache-maven-3.5.0\bin;D:\Program Files\MongoDB\Server\3.4\bin;D:\Program Files\Git\cmd;D:\Program Files\MATLAB\R2016a\bin;;.
+
+[INFO ]-[05-15 22:24:57]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.io.tmpdir=C:\Users\GGR\AppData\Local\Temp\
+
+[INFO ]-[05-15 22:24:57]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.compiler=<NA>
+
+[INFO ]-[05-15 22:24:57]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.name=Windows 7
+
+[INFO ]-[05-15 22:24:57]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.arch=amd64
+
+[INFO ]-[05-15 22:24:57]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.version=6.1
+
+[INFO ]-[05-15 22:24:57]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.name=GGR
+
+[INFO ]-[05-15 22:24:57]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.home=C:\Users\GGR
+
+[INFO ]-[05-15 22:24:57]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.dir=E:\ideaProject\githubProject\NettyRpc
+
+[INFO ]-[05-15 22:24:57]-[method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)]
+Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=5000 watcher=org.gary.nettyrpc.zookeeper.ZKManager@5a2e4553
+
+[INFO ]-[05-15 22:24:58]-[method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:975)]
+Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+
+[INFO ]-[05-15 22:24:58]-[method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:852)]
+Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+
+[WARN ]-[05-15 22:25:00]-[method:org.apache.zookeeper.ClientCnxnSocket.readConnectResult(ClientCnxnSocket.java:139)]
+Connected to an old server; r-o mode will be unavailable
+
+[INFO ]-[05-15 22:25:00]-[method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1235)]
+Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x163631b8a44005f, negotiated timeout = 5000
+
+[INFO ]-[05-15 22:25:00]-[method:org.gary.nettyrpc.zookeeper.ZKManager.connect(ZKManager.java:49)]
+successfully connected to 127.0.0.1:2181
+
+[INFO ]-[05-15 22:25:03]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+
+[INFO ]-[05-15 22:25:03]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:host.name=GGR-PC
+
+[INFO ]-[05-15 22:25:03]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.version=1.8.0_144
+
+[INFO ]-[05-15 22:25:03]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.vendor=Oracle Corporation
+
+[INFO ]-[05-15 22:25:03]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.home=C:\Program Files\Java\jdk1.8.0_144\jre
+
+[INFO ]-[05-15 22:25:03]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.class.path=C:\Program Files\Java\jdk1.8.0_144\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jline-2.12.1.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\rt.jar;E:\ideaProject\githubProject\NettyRpc\target\test-classes;E:\ideaProject\githubProject\NettyRpc\target\classes;C:\Users\GGR\.m2\repository\io\netty\netty-all\4.0.24.Final\netty-all-4.0.24.Final.jar;C:\Users\GGR\.m2\repository\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;C:\Users\GGR\.m2\repository\org\slf4j\slf4j-api\1.6.1\slf4j-api-1.6.1.jar;C:\Users\GGR\.m2\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;C:\Users\GGR\.m2\repository\log4j\log4j\1.2.16\log4j-1.2.16.jar;C:\Users\GGR\.m2\repository\jline\jline\0.9.94\jline-0.9.94.jar;C:\Users\GGR\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;C:\Users\GGR\.m2\repository\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;C:\Users\GGR\.m2\repository\org\gary\nettyrpc-service\1.0-SNAPSHOT\nettyrpc-service-1.0-SNAPSHOT.jar;C:\Users\GGR\.m2\repository\org\gary\nettyrpc-pojo\1.0-SNAPSHOT\nettyrpc-pojo-1.0-SNAPSHOT.jar;C:\Users\GGR\.m2\repository\com\dyuproject\protostuff\protostuff-core\1.0.8\protostuff-core-1.0.8.jar;C:\Users\GGR\.m2\repository\com\dyuproject\protostuff\protostuff-api\1.0.8\protostuff-api-1.0.8.jar;C:\Users\GGR\.m2\repository\com\dyuproject\protostuff\protostuff-runtime\1.0.8\protostuff-runtime-1.0.8.jar;C:\Users\GGR\.m2\repository\com\dyuproject\protostuff\protostuff-collectionschema\1.0.8\protostuff-collectionschema-1.0.8.jar;D:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2017.2.2\lib\idea_rt.jar
+
+[INFO ]-[05-15 22:25:03]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.library.path=C:\Program Files\Java\jdk1.8.0_144\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;D:\Program Files\mysql-5.6.37-winx64\bin;D:\Program Files\Python2.7;D:\Program Files\Python2.7\Scripts;D:\Program Files (x86)\Mozilla Firefox;C:\Program Files\Java\jdk1.8.0_144\bin;C:\Program Files\Java\jdk1.8.0_144\jre\bin;..;.;C:\Program Files\Java\jdk1.8.0_144\lib\dt.jar;C:\Program Files\Java\jdk1.8.0_144\lib\tools.jar;;D:\Program Files\gradle-4.1\bin;D:\Program Files\apache-maven-3.5.0\bin;D:\Program Files\MongoDB\Server\3.4\bin;D:\Program Files\Git\cmd;D:\Program Files\MATLAB\R2016a\bin;;.
+
+[INFO ]-[05-15 22:25:03]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.io.tmpdir=C:\Users\GGR\AppData\Local\Temp\
+
+[INFO ]-[05-15 22:25:03]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.compiler=<NA>
+
+[INFO ]-[05-15 22:25:03]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.name=Windows 7
+
+[INFO ]-[05-15 22:25:03]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.arch=amd64
+
+[INFO ]-[05-15 22:25:03]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.version=6.1
+
+[INFO ]-[05-15 22:25:03]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.name=GGR
+
+[INFO ]-[05-15 22:25:03]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.home=C:\Users\GGR
+
+[INFO ]-[05-15 22:25:03]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.dir=E:\ideaProject\githubProject\NettyRpc
+
+[INFO ]-[05-15 22:25:03]-[method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)]
+Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=5000 watcher=org.gary.nettyrpc.zookeeper.ZKManager@5ef04b5
+
+[INFO ]-[05-15 22:25:05]-[method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:975)]
+Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+
+[INFO ]-[05-15 22:25:05]-[method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:852)]
+Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+
+[WARN ]-[05-15 22:25:05]-[method:org.apache.zookeeper.ClientCnxnSocket.readConnectResult(ClientCnxnSocket.java:139)]
+Connected to an old server; r-o mode will be unavailable
+
+[INFO ]-[05-15 22:25:05]-[method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1235)]
+Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x163631b8a440060, negotiated timeout = 5000
+
+[INFO ]-[05-15 22:25:05]-[method:org.gary.nettyrpc.zookeeper.ZKManager.connect(ZKManager.java:49)]
+successfully connected to 127.0.0.1:2181
+
+[INFO ]-[05-15 22:25:05]-[method:org.apache.zookeeper.ZooKeeper.close(ZooKeeper.java:684)]
+Session: 0x163631b8a44005f closed
+
+[INFO ]-[05-15 22:25:05]-[method:org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:512)]
+EventThread shut down
+
+[INFO ]-[05-15 22:25:07]-[method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)]
+Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=5000 watcher=org.gary.nettyrpc.zookeeper.ZKManager@5a2e4553
+
+[INFO ]-[05-15 22:25:07]-[method:org.gary.nettyrpc.zookeeper.ZKManager.connect(ZKManager.java:49)]
+successfully connected to 127.0.0.1:2181
+
+[INFO ]-[05-15 22:25:07]-[method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:975)]
+Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+
+[INFO ]-[05-15 22:25:07]-[method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:852)]
+Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+
+[WARN ]-[05-15 22:25:07]-[method:org.apache.zookeeper.ClientCnxnSocket.readConnectResult(ClientCnxnSocket.java:139)]
+Connected to an old server; r-o mode will be unavailable
+
+[INFO ]-[05-15 22:25:07]-[method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1235)]
+Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x163631b8a440061, negotiated timeout = 5000
+
+[INFO ]-[05-15 22:25:07]-[method:org.apache.zookeeper.ZooKeeper.close(ZooKeeper.java:684)]
+Session: 0x163631b8a440061 closed
+
+[INFO ]-[05-15 22:25:07]-[method:org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:512)]
+EventThread shut down
+
+[INFO ]-[05-15 22:25:22]-[method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)]
+Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=5000 watcher=org.gary.nettyrpc.zookeeper.ZKManager@5a2e4553
+
+[INFO ]-[05-15 22:25:22]-[method:org.gary.nettyrpc.zookeeper.ZKManager.connect(ZKManager.java:49)]
+successfully connected to 127.0.0.1:2181
+
+[INFO ]-[05-15 22:25:22]-[method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:975)]
+Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+
+[INFO ]-[05-15 22:25:22]-[method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:852)]
+Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+
+[WARN ]-[05-15 22:25:23]-[method:org.apache.zookeeper.ClientCnxnSocket.readConnectResult(ClientCnxnSocket.java:139)]
+Connected to an old server; r-o mode will be unavailable
+
+[INFO ]-[05-15 22:25:23]-[method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1235)]
+Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x163631b8a440062, negotiated timeout = 5000
+
+[INFO ]-[05-15 22:25:23]-[method:org.apache.zookeeper.ZooKeeper.close(ZooKeeper.java:684)]
+Session: 0x163631b8a440062 closed
+
+[INFO ]-[05-15 22:25:23]-[method:org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:512)]
+EventThread shut down
+
+[INFO ]-[05-15 22:25:35]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+
+[INFO ]-[05-15 22:25:35]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:host.name=GGR-PC
+
+[INFO ]-[05-15 22:25:35]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.version=1.8.0_144
+
+[INFO ]-[05-15 22:25:35]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.vendor=Oracle Corporation
+
+[INFO ]-[05-15 22:25:35]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.home=C:\Program Files\Java\jdk1.8.0_144\jre
+
+[INFO ]-[05-15 22:25:35]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.class.path=C:\Program Files\Java\jdk1.8.0_144\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jline-2.12.1.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\rt.jar;E:\ideaProject\githubProject\NettyRpc\target\test-classes;E:\ideaProject\githubProject\NettyRpc\target\classes;C:\Users\GGR\.m2\repository\io\netty\netty-all\4.0.24.Final\netty-all-4.0.24.Final.jar;C:\Users\GGR\.m2\repository\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;C:\Users\GGR\.m2\repository\org\slf4j\slf4j-api\1.6.1\slf4j-api-1.6.1.jar;C:\Users\GGR\.m2\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;C:\Users\GGR\.m2\repository\log4j\log4j\1.2.16\log4j-1.2.16.jar;C:\Users\GGR\.m2\repository\jline\jline\0.9.94\jline-0.9.94.jar;C:\Users\GGR\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;C:\Users\GGR\.m2\repository\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;C:\Users\GGR\.m2\repository\org\gary\nettyrpc-service\1.0-SNAPSHOT\nettyrpc-service-1.0-SNAPSHOT.jar;C:\Users\GGR\.m2\repository\org\gary\nettyrpc-pojo\1.0-SNAPSHOT\nettyrpc-pojo-1.0-SNAPSHOT.jar;C:\Users\GGR\.m2\repository\com\dyuproject\protostuff\protostuff-core\1.0.8\protostuff-core-1.0.8.jar;C:\Users\GGR\.m2\repository\com\dyuproject\protostuff\protostuff-api\1.0.8\protostuff-api-1.0.8.jar;C:\Users\GGR\.m2\repository\com\dyuproject\protostuff\protostuff-runtime\1.0.8\protostuff-runtime-1.0.8.jar;C:\Users\GGR\.m2\repository\com\dyuproject\protostuff\protostuff-collectionschema\1.0.8\protostuff-collectionschema-1.0.8.jar;D:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2017.2.2\lib\idea_rt.jar
+
+[INFO ]-[05-15 22:25:35]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.library.path=C:\Program Files\Java\jdk1.8.0_144\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;D:\Program Files\mysql-5.6.37-winx64\bin;D:\Program Files\Python2.7;D:\Program Files\Python2.7\Scripts;D:\Program Files (x86)\Mozilla Firefox;C:\Program Files\Java\jdk1.8.0_144\bin;C:\Program Files\Java\jdk1.8.0_144\jre\bin;..;.;C:\Program Files\Java\jdk1.8.0_144\lib\dt.jar;C:\Program Files\Java\jdk1.8.0_144\lib\tools.jar;;D:\Program Files\gradle-4.1\bin;D:\Program Files\apache-maven-3.5.0\bin;D:\Program Files\MongoDB\Server\3.4\bin;D:\Program Files\Git\cmd;D:\Program Files\MATLAB\R2016a\bin;;.
+
+[INFO ]-[05-15 22:25:35]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.io.tmpdir=C:\Users\GGR\AppData\Local\Temp\
+
+[INFO ]-[05-15 22:25:35]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.compiler=<NA>
+
+[INFO ]-[05-15 22:25:35]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.name=Windows 7
+
+[INFO ]-[05-15 22:25:35]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.arch=amd64
+
+[INFO ]-[05-15 22:25:35]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.version=6.1
+
+[INFO ]-[05-15 22:25:35]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.name=GGR
+
+[INFO ]-[05-15 22:25:35]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.home=C:\Users\GGR
+
+[INFO ]-[05-15 22:25:35]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.dir=E:\ideaProject\githubProject\NettyRpc
+
+[INFO ]-[05-15 22:25:35]-[method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)]
+Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=5000 watcher=org.gary.nettyrpc.zookeeper.ZKManager@5a2e4553
+
+[INFO ]-[05-15 22:25:37]-[method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:975)]
+Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+
+[INFO ]-[05-15 22:25:37]-[method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:852)]
+Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+
+[WARN ]-[05-15 22:25:37]-[method:org.apache.zookeeper.ClientCnxnSocket.readConnectResult(ClientCnxnSocket.java:139)]
+Connected to an old server; r-o mode will be unavailable
+
+[INFO ]-[05-15 22:25:37]-[method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1235)]
+Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x163631b8a440063, negotiated timeout = 5000
+
+[INFO ]-[05-15 22:25:37]-[method:org.gary.nettyrpc.zookeeper.ZKManager.connect(ZKManager.java:49)]
+successfully connected to 127.0.0.1:2181
+
+[INFO ]-[05-15 22:25:42]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+
+[INFO ]-[05-15 22:25:42]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:host.name=GGR-PC
+
+[INFO ]-[05-15 22:25:42]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.version=1.8.0_144
+
+[INFO ]-[05-15 22:25:42]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.vendor=Oracle Corporation
+
+[INFO ]-[05-15 22:25:42]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.home=C:\Program Files\Java\jdk1.8.0_144\jre
+
+[INFO ]-[05-15 22:25:42]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.class.path=C:\Program Files\Java\jdk1.8.0_144\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jline-2.12.1.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\rt.jar;E:\ideaProject\githubProject\NettyRpc\target\test-classes;E:\ideaProject\githubProject\NettyRpc\target\classes;C:\Users\GGR\.m2\repository\io\netty\netty-all\4.0.24.Final\netty-all-4.0.24.Final.jar;C:\Users\GGR\.m2\repository\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;C:\Users\GGR\.m2\repository\org\slf4j\slf4j-api\1.6.1\slf4j-api-1.6.1.jar;C:\Users\GGR\.m2\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;C:\Users\GGR\.m2\repository\log4j\log4j\1.2.16\log4j-1.2.16.jar;C:\Users\GGR\.m2\repository\jline\jline\0.9.94\jline-0.9.94.jar;C:\Users\GGR\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;C:\Users\GGR\.m2\repository\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;C:\Users\GGR\.m2\repository\org\gary\nettyrpc-service\1.0-SNAPSHOT\nettyrpc-service-1.0-SNAPSHOT.jar;C:\Users\GGR\.m2\repository\org\gary\nettyrpc-pojo\1.0-SNAPSHOT\nettyrpc-pojo-1.0-SNAPSHOT.jar;C:\Users\GGR\.m2\repository\com\dyuproject\protostuff\protostuff-core\1.0.8\protostuff-core-1.0.8.jar;C:\Users\GGR\.m2\repository\com\dyuproject\protostuff\protostuff-api\1.0.8\protostuff-api-1.0.8.jar;C:\Users\GGR\.m2\repository\com\dyuproject\protostuff\protostuff-runtime\1.0.8\protostuff-runtime-1.0.8.jar;C:\Users\GGR\.m2\repository\com\dyuproject\protostuff\protostuff-collectionschema\1.0.8\protostuff-collectionschema-1.0.8.jar;D:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2017.2.2\lib\idea_rt.jar
+
+[INFO ]-[05-15 22:25:42]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.library.path=C:\Program Files\Java\jdk1.8.0_144\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;D:\Program Files\mysql-5.6.37-winx64\bin;D:\Program Files\Python2.7;D:\Program Files\Python2.7\Scripts;D:\Program Files (x86)\Mozilla Firefox;C:\Program Files\Java\jdk1.8.0_144\bin;C:\Program Files\Java\jdk1.8.0_144\jre\bin;..;.;C:\Program Files\Java\jdk1.8.0_144\lib\dt.jar;C:\Program Files\Java\jdk1.8.0_144\lib\tools.jar;;D:\Program Files\gradle-4.1\bin;D:\Program Files\apache-maven-3.5.0\bin;D:\Program Files\MongoDB\Server\3.4\bin;D:\Program Files\Git\cmd;D:\Program Files\MATLAB\R2016a\bin;;.
+
+[INFO ]-[05-15 22:25:42]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.io.tmpdir=C:\Users\GGR\AppData\Local\Temp\
+
+[INFO ]-[05-15 22:25:42]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.compiler=<NA>
+
+[INFO ]-[05-15 22:25:42]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.name=Windows 7
+
+[INFO ]-[05-15 22:25:42]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.arch=amd64
+
+[INFO ]-[05-15 22:25:42]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.version=6.1
+
+[INFO ]-[05-15 22:25:42]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.name=GGR
+
+[INFO ]-[05-15 22:25:42]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.home=C:\Users\GGR
+
+[INFO ]-[05-15 22:25:42]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.dir=E:\ideaProject\githubProject\NettyRpc
+
+[INFO ]-[05-15 22:25:42]-[method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)]
+Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=5000 watcher=org.gary.nettyrpc.zookeeper.ZKManager@5ef04b5
+
+[INFO ]-[05-15 22:25:44]-[method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:975)]
+Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+
+[INFO ]-[05-15 22:25:44]-[method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:852)]
+Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+
+[WARN ]-[05-15 22:25:44]-[method:org.apache.zookeeper.ClientCnxnSocket.readConnectResult(ClientCnxnSocket.java:139)]
+Connected to an old server; r-o mode will be unavailable
+
+[INFO ]-[05-15 22:25:44]-[method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1235)]
+Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x163631b8a440064, negotiated timeout = 5000
+
+[INFO ]-[05-15 22:25:44]-[method:org.gary.nettyrpc.zookeeper.ZKManager.connect(ZKManager.java:49)]
+successfully connected to 127.0.0.1:2181
+
+[INFO ]-[05-15 22:25:44]-[method:org.apache.zookeeper.ZooKeeper.close(ZooKeeper.java:684)]
+Session: 0x163631b8a440063 closed
+
+[INFO ]-[05-15 22:25:44]-[method:org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:512)]
+EventThread shut down
+
+[INFO ]-[05-15 22:25:45]-[method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)]
+Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=5000 watcher=org.gary.nettyrpc.zookeeper.ZKManager@5a2e4553
+
+[INFO ]-[05-15 22:25:45]-[method:org.gary.nettyrpc.zookeeper.ZKManager.connect(ZKManager.java:49)]
+successfully connected to 127.0.0.1:2181
+
+[INFO ]-[05-15 22:25:45]-[method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:975)]
+Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+
+[INFO ]-[05-15 22:25:45]-[method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:852)]
+Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+
+[WARN ]-[05-15 22:25:46]-[method:org.apache.zookeeper.ClientCnxnSocket.readConnectResult(ClientCnxnSocket.java:139)]
+Connected to an old server; r-o mode will be unavailable
+
+[INFO ]-[05-15 22:25:46]-[method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1235)]
+Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x163631b8a440065, negotiated timeout = 5000
+
+[INFO ]-[05-15 22:25:46]-[method:org.apache.zookeeper.ZooKeeper.close(ZooKeeper.java:684)]
+Session: 0x163631b8a440065 closed
+
+[INFO ]-[05-15 22:25:46]-[method:org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:512)]
+EventThread shut down
+
+[INFO ]-[05-15 22:25:56]-[method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)]
+Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=5000 watcher=org.gary.nettyrpc.zookeeper.ZKManager@5a2e4553
+
+[INFO ]-[05-15 22:25:56]-[method:org.gary.nettyrpc.zookeeper.ZKManager.connect(ZKManager.java:49)]
+successfully connected to 127.0.0.1:2181
+
+[INFO ]-[05-15 22:25:56]-[method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:975)]
+Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+
+[INFO ]-[05-15 22:25:56]-[method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:852)]
+Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+
+[WARN ]-[05-15 22:25:57]-[method:org.apache.zookeeper.ClientCnxnSocket.readConnectResult(ClientCnxnSocket.java:139)]
+Connected to an old server; r-o mode will be unavailable
+
+[INFO ]-[05-15 22:25:57]-[method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1235)]
+Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x163631b8a440066, negotiated timeout = 5000
+
+[INFO ]-[05-15 22:25:58]-[method:org.apache.zookeeper.ZooKeeper.close(ZooKeeper.java:684)]
+Session: 0x163631b8a440066 closed
+
+[INFO ]-[05-15 22:25:58]-[method:org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:512)]
+EventThread shut down
+
+[INFO ]-[05-15 22:26:03]-[method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)]
+Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=5000 watcher=org.gary.nettyrpc.zookeeper.ZKManager@5a2e4553
+
+[INFO ]-[05-15 22:26:03]-[method:org.gary.nettyrpc.zookeeper.ZKManager.connect(ZKManager.java:49)]
+successfully connected to 127.0.0.1:2181
+
+[INFO ]-[05-15 22:26:03]-[method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:975)]
+Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+
+[INFO ]-[05-15 22:26:03]-[method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:852)]
+Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+
+[WARN ]-[05-15 22:26:03]-[method:org.apache.zookeeper.ClientCnxnSocket.readConnectResult(ClientCnxnSocket.java:139)]
+Connected to an old server; r-o mode will be unavailable
+
+[INFO ]-[05-15 22:26:03]-[method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1235)]
+Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x163631b8a440067, negotiated timeout = 5000
+
+[INFO ]-[05-15 22:27:25]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+
+[INFO ]-[05-15 22:27:25]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:host.name=GGR-PC
+
+[INFO ]-[05-15 22:27:25]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.version=1.8.0_144
+
+[INFO ]-[05-15 22:27:25]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.vendor=Oracle Corporation
+
+[INFO ]-[05-15 22:27:25]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.home=C:\Program Files\Java\jdk1.8.0_144\jre
+
+[INFO ]-[05-15 22:27:25]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.class.path=C:\Program Files\Java\jdk1.8.0_144\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jline-2.12.1.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\rt.jar;E:\ideaProject\githubProject\NettyRpc\target\test-classes;E:\ideaProject\githubProject\NettyRpc\target\classes;C:\Users\GGR\.m2\repository\io\netty\netty-all\4.0.24.Final\netty-all-4.0.24.Final.jar;C:\Users\GGR\.m2\repository\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;C:\Users\GGR\.m2\repository\org\slf4j\slf4j-api\1.6.1\slf4j-api-1.6.1.jar;C:\Users\GGR\.m2\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;C:\Users\GGR\.m2\repository\log4j\log4j\1.2.16\log4j-1.2.16.jar;C:\Users\GGR\.m2\repository\jline\jline\0.9.94\jline-0.9.94.jar;C:\Users\GGR\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;C:\Users\GGR\.m2\repository\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;C:\Users\GGR\.m2\repository\org\gary\nettyrpc-service\1.0-SNAPSHOT\nettyrpc-service-1.0-SNAPSHOT.jar;C:\Users\GGR\.m2\repository\org\gary\nettyrpc-pojo\1.0-SNAPSHOT\nettyrpc-pojo-1.0-SNAPSHOT.jar;C:\Users\GGR\.m2\repository\com\dyuproject\protostuff\protostuff-core\1.0.8\protostuff-core-1.0.8.jar;C:\Users\GGR\.m2\repository\com\dyuproject\protostuff\protostuff-api\1.0.8\protostuff-api-1.0.8.jar;C:\Users\GGR\.m2\repository\com\dyuproject\protostuff\protostuff-runtime\1.0.8\protostuff-runtime-1.0.8.jar;C:\Users\GGR\.m2\repository\com\dyuproject\protostuff\protostuff-collectionschema\1.0.8\protostuff-collectionschema-1.0.8.jar;D:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2017.2.2\lib\idea_rt.jar
+
+[INFO ]-[05-15 22:27:25]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.library.path=C:\Program Files\Java\jdk1.8.0_144\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;D:\Program Files\mysql-5.6.37-winx64\bin;D:\Program Files\Python2.7;D:\Program Files\Python2.7\Scripts;D:\Program Files (x86)\Mozilla Firefox;C:\Program Files\Java\jdk1.8.0_144\bin;C:\Program Files\Java\jdk1.8.0_144\jre\bin;..;.;C:\Program Files\Java\jdk1.8.0_144\lib\dt.jar;C:\Program Files\Java\jdk1.8.0_144\lib\tools.jar;;D:\Program Files\gradle-4.1\bin;D:\Program Files\apache-maven-3.5.0\bin;D:\Program Files\MongoDB\Server\3.4\bin;D:\Program Files\Git\cmd;D:\Program Files\MATLAB\R2016a\bin;;.
+
+[INFO ]-[05-15 22:27:25]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.io.tmpdir=C:\Users\GGR\AppData\Local\Temp\
+
+[INFO ]-[05-15 22:27:25]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.compiler=<NA>
+
+[INFO ]-[05-15 22:27:25]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.name=Windows 7
+
+[INFO ]-[05-15 22:27:25]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.arch=amd64
+
+[INFO ]-[05-15 22:27:25]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.version=6.1
+
+[INFO ]-[05-15 22:27:25]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.name=GGR
+
+[INFO ]-[05-15 22:27:25]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.home=C:\Users\GGR
+
+[INFO ]-[05-15 22:27:25]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.dir=E:\ideaProject\githubProject\NettyRpc
+
+[INFO ]-[05-15 22:27:25]-[method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)]
+Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=5000 watcher=org.gary.nettyrpc.zookeeper.ZKManager@5a2e4553
+
+[INFO ]-[05-15 22:27:26]-[method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:975)]
+Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+
+[INFO ]-[05-15 22:27:27]-[method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:852)]
+Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+
+[WARN ]-[05-15 22:27:27]-[method:org.apache.zookeeper.ClientCnxnSocket.readConnectResult(ClientCnxnSocket.java:139)]
+Connected to an old server; r-o mode will be unavailable
+
+[INFO ]-[05-15 22:27:27]-[method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1235)]
+Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x163631b8a440068, negotiated timeout = 5000
+
+[INFO ]-[05-15 22:27:27]-[method:org.gary.nettyrpc.zookeeper.ZKManager.connect(ZKManager.java:49)]
+successfully connected to 127.0.0.1:2181
+
+[INFO ]-[05-15 22:27:33]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+
+[INFO ]-[05-15 22:27:33]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:host.name=GGR-PC
+
+[INFO ]-[05-15 22:27:33]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.version=1.8.0_144
+
+[INFO ]-[05-15 22:27:33]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.vendor=Oracle Corporation
+
+[INFO ]-[05-15 22:27:33]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.home=C:\Program Files\Java\jdk1.8.0_144\jre
+
+[INFO ]-[05-15 22:27:33]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.class.path=C:\Program Files\Java\jdk1.8.0_144\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jline-2.12.1.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\rt.jar;E:\ideaProject\githubProject\NettyRpc\target\test-classes;E:\ideaProject\githubProject\NettyRpc\target\classes;C:\Users\GGR\.m2\repository\io\netty\netty-all\4.0.24.Final\netty-all-4.0.24.Final.jar;C:\Users\GGR\.m2\repository\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;C:\Users\GGR\.m2\repository\org\slf4j\slf4j-api\1.6.1\slf4j-api-1.6.1.jar;C:\Users\GGR\.m2\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;C:\Users\GGR\.m2\repository\log4j\log4j\1.2.16\log4j-1.2.16.jar;C:\Users\GGR\.m2\repository\jline\jline\0.9.94\jline-0.9.94.jar;C:\Users\GGR\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;C:\Users\GGR\.m2\repository\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;C:\Users\GGR\.m2\repository\org\gary\nettyrpc-service\1.0-SNAPSHOT\nettyrpc-service-1.0-SNAPSHOT.jar;C:\Users\GGR\.m2\repository\org\gary\nettyrpc-pojo\1.0-SNAPSHOT\nettyrpc-pojo-1.0-SNAPSHOT.jar;C:\Users\GGR\.m2\repository\com\dyuproject\protostuff\protostuff-core\1.0.8\protostuff-core-1.0.8.jar;C:\Users\GGR\.m2\repository\com\dyuproject\protostuff\protostuff-api\1.0.8\protostuff-api-1.0.8.jar;C:\Users\GGR\.m2\repository\com\dyuproject\protostuff\protostuff-runtime\1.0.8\protostuff-runtime-1.0.8.jar;C:\Users\GGR\.m2\repository\com\dyuproject\protostuff\protostuff-collectionschema\1.0.8\protostuff-collectionschema-1.0.8.jar;D:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2017.2.2\lib\idea_rt.jar
+
+[INFO ]-[05-15 22:27:33]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.library.path=C:\Program Files\Java\jdk1.8.0_144\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;D:\Program Files\mysql-5.6.37-winx64\bin;D:\Program Files\Python2.7;D:\Program Files\Python2.7\Scripts;D:\Program Files (x86)\Mozilla Firefox;C:\Program Files\Java\jdk1.8.0_144\bin;C:\Program Files\Java\jdk1.8.0_144\jre\bin;..;.;C:\Program Files\Java\jdk1.8.0_144\lib\dt.jar;C:\Program Files\Java\jdk1.8.0_144\lib\tools.jar;;D:\Program Files\gradle-4.1\bin;D:\Program Files\apache-maven-3.5.0\bin;D:\Program Files\MongoDB\Server\3.4\bin;D:\Program Files\Git\cmd;D:\Program Files\MATLAB\R2016a\bin;;.
+
+[INFO ]-[05-15 22:27:33]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.io.tmpdir=C:\Users\GGR\AppData\Local\Temp\
+
+[INFO ]-[05-15 22:27:33]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:java.compiler=<NA>
+
+[INFO ]-[05-15 22:27:33]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.name=Windows 7
+
+[INFO ]-[05-15 22:27:33]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.arch=amd64
+
+[INFO ]-[05-15 22:27:33]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:os.version=6.1
+
+[INFO ]-[05-15 22:27:33]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.name=GGR
+
+[INFO ]-[05-15 22:27:33]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.home=C:\Users\GGR
+
+[INFO ]-[05-15 22:27:33]-[method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)]
+Client environment:user.dir=E:\ideaProject\githubProject\NettyRpc
+
+[INFO ]-[05-15 22:27:33]-[method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)]
+Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=5000 watcher=org.gary.nettyrpc.zookeeper.ZKManager@35f983a6
+
+[INFO ]-[05-15 22:27:33]-[method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:975)]
+Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+
+[INFO ]-[05-15 22:27:33]-[method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:852)]
+Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+
+[WARN ]-[05-15 22:27:33]-[method:org.apache.zookeeper.ClientCnxnSocket.readConnectResult(ClientCnxnSocket.java:139)]
+Connected to an old server; r-o mode will be unavailable
+
+[INFO ]-[05-15 22:27:33]-[method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1235)]
+Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x163631b8a440069, negotiated timeout = 5000
+
+[INFO ]-[05-15 22:27:33]-[method:org.gary.nettyrpc.zookeeper.ZKManager.connect(ZKManager.java:49)]
+successfully connected to 127.0.0.1:2181
+
+[INFO ]-[05-15 22:27:33]-[method:org.apache.zookeeper.ZooKeeper.close(ZooKeeper.java:684)]
+Session: 0x163631b8a440068 closed
+
+[INFO ]-[05-15 22:27:33]-[method:org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:512)]
+EventThread shut down
+

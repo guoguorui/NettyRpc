@@ -11,6 +11,8 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 
 import java.net.InetSocketAddress;
 
+
+//发现服务器，但是服务器Netty未完全启动就急着连接
 class ConnectThread extends Thread{
 
     private RpcClientHandler rpcClientHandler;
