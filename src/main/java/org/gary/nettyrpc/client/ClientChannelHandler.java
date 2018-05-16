@@ -46,6 +46,8 @@ public class ClientChannelHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+        System.out.println("与服务器断开"+ctx.channel().remoteAddress());
+        cause.printStackTrace();
         ctx.close();
     }
 
