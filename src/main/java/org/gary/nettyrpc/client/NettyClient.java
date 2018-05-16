@@ -12,6 +12,7 @@ import org.gary.nettyrpc.carrier.RpcRequest;
 import org.gary.nettyrpc.carrier.RpcResponse;
 import org.gary.nettyrpc.common.ClientDecoder;
 import org.gary.nettyrpc.common.ClientEncoder;
+import org.jboss.netty.util.internal.ConcurrentHashMap;
 
 import java.lang.reflect.Method;
 import java.net.InetSocketAddress;
@@ -82,8 +83,10 @@ class NettyClient {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        HashMap<Integer,RpcResponse> map= clientChannelHandler.idToResult;
-        return map.get(requestId);
+        ConcurrentHashMap<Integer,RpcResponse> map= clientChannelHandler.idToResult;
+        RpcResponse rpcResponse=map.get(requestId);
+        clientChannelHandler.idToResult.remove(requestId);
+        return rpcResponse;
     }
 
     private RpcResponse getErrorResponse(){

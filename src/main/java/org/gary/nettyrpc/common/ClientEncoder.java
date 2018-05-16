@@ -13,7 +13,6 @@ public class ClientEncoder extends MessageToByteEncoder<RpcRequest>{
             throw new Exception("msg is null");
         byte[] request=SerializeUtils.serialize(msg,RpcRequest.class);
         out.writeInt(request.length);
-        System.out.println("要传输的字节长度"+request.length);
         out.writeBytes(request);
     }
 }

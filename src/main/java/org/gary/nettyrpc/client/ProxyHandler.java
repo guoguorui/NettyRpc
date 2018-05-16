@@ -33,7 +33,7 @@ public class ProxyHandler implements InvocationHandler {
     public Object invoke(Object proxy, Method method, Object[] args) {
         int id = atomicInteger.addAndGet(1);
         RpcResponse rpcResponse = nettyClient.call(method, args, id);
-        System.out.println("收到回应了  ：" + rpcResponse.getId());
+        System.out.println(Thread.currentThread()+"收到回应了  ：" + rpcResponse.getId());
         if (rpcResponse.getStatus() == -1) {
             atomicInteger.decrementAndGet();
             serverAddress=sd.discover(serviceName,serverAddress);

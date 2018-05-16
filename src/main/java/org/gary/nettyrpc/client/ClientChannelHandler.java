@@ -1,30 +1,28 @@
 package org.gary.nettyrpc.client;
 
-import io.netty.buffer.ByteBuf;
-import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import org.gary.nettyrpc.carrier.RpcRequest;
 import org.gary.nettyrpc.carrier.RpcResponse;
-import org.gary.nettyrpc.common.SerializeUtils;
+import org.jboss.netty.util.internal.ConcurrentHashMap;
 
 import java.util.HashMap;
 import java.util.concurrent.CountDownLatch;
 
 public class ClientChannelHandler extends ChannelInboundHandlerAdapter {
 
-    private HashMap<Integer,CountDownLatch> idToSignal =new HashMap<>();
-    HashMap<Integer,RpcResponse> idToResult =new HashMap<>();
+    private ConcurrentHashMap<Integer,CountDownLatch> idToSignal =new ConcurrentHashMap<>();
+    ConcurrentHashMap<Integer,RpcResponse> idToResult =new ConcurrentHashMap<>();
     private ChannelHandlerContext ctx;
 
     void sendRpcRequest(RpcRequest rpcRequest,CountDownLatch countDownLatch){
         idToSignal.put(rpcRequest.getId(),countDownLatch);
-        //byte[] request = SerializeUtils.serialize(rpcRequest, RpcRequest.class);
-        //ByteBuf clientMessage = Unpooled.buffer(request.length);
-        //clientMessage.writeBytes(request);
-        //ctx.writeAndFlush(clientMessage);
+        for (int id:idToSignal.keySet()) {
+            System.out.print(id+" ");
+        }
+        System.out.println();
         ctx.writeAndFlush(rpcRequest);
-        System.out.println("请求发出去了："+rpcRequest.getId());
+        System.out.println(Thread.currentThread()+"请求发出去了："+rpcRequest.getId());
     }
 
     @Override
@@ -34,14 +32,13 @@ public class ClientChannelHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        //ByteBuf buf = (ByteBuf) msg;
-        //byte[] response = new byte[buf.readableBytes()];
-        //buf.readBytes(response);
-        //RpcResponse rpcResponse = SerializeUtils.deserialize(response, RpcResponse.class);
         RpcResponse rpcResponse=(RpcResponse) msg;
         idToResult.put(rpcResponse.getId(),rpcResponse);
         CountDownLatch countDownLatch= idToSignal.get(rpcResponse.getId());
-        countDownLatch.countDown();
+        if(countDownLatch!=null){
+            idToSignal.remove(rpcResponse.getId());
+            countDownLatch.countDown();
+        }
     }
 
     @Override

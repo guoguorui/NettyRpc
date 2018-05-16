@@ -15,20 +15,15 @@ public class ServerDecoder extends LengthFieldBasedFrameDecoder {
 
     @Override
     protected Object decode(ChannelHandlerContext ctx, ByteBuf in) throws Exception {
-        if (in == null) {
+        if (in == null)
             return null;
-        }
-        if (in.readableBytes() < 4) {
-            //throw new Exception("可读信息段比头部信息都小，你在逗我？");
+        if (in.readableBytes() < 4)
             return null;
-        }
         //注意在读的过程中，readIndex的指针也在移动
         if(length==0)
             length=in.readInt();
-        if (in.readableBytes() < length) {
-            //throw new Exception("body字段你告诉我长度是"+length+",但是真实情况是没有这么多，你又逗我？");
+        if (in.readableBytes() < length)
             return null;
-        }
         ByteBuf buf = in.readBytes(length);
         byte[] request = new byte[buf.readableBytes()];
         buf.readBytes(request);

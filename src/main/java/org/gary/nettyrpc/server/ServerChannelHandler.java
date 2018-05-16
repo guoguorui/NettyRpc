@@ -19,14 +19,6 @@ public class ServerChannelHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        /*ByteBuf bytebuf = (ByteBuf) msg;
-        byte[] request = new byte[bytebuf.readableBytes()];
-        bytebuf.readBytes(request);
-        for (int i = 0; i < request.length; i++) {
-            System.out.print(request[i]+" ");
-        }
-        System.out.printf("");
-        RpcRequest rpcRequest = SerializeUtils.deserialize(request, RpcRequest.class);*/
         RpcRequest rpcRequest=(RpcRequest) msg;
         Class<?> interfaceClass = rpcRequest.getInterfaceClass();
         Object implObject = ScanImpl.scanType(implPackage, interfaceClass);
@@ -41,10 +33,6 @@ public class ServerChannelHandler extends ChannelInboundHandlerAdapter {
         int id=rpcRequest.getId();
         rpcResponse.setId(id);
         System.out.println("处理完请求："+id);
-        //byte[] response = SerializeUtils.serialize(rpcResponse, RpcResponse.class);
-        //bytebuf.clear();
-        //bytebuf.writeBytes(response);
-        //ctx.writeAndFlush(bytebuf);
         ctx.writeAndFlush(rpcResponse);
     }
 
