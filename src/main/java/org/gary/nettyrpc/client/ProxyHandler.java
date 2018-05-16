@@ -15,6 +15,7 @@ public class ProxyHandler implements InvocationHandler {
     private ServiceDiscover sd;
     private String serviceName;
     private String serverAddress;
+    private Class serviceClass;
 
     ProxyHandler(String zkAddress){
         sd = new ServiceDiscover(zkAddress);
@@ -22,10 +23,10 @@ public class ProxyHandler implements InvocationHandler {
 
     @SuppressWarnings("unchecked")
     <T> T getImplObj(Class<T> serviceClass) {
+        this.serviceClass=serviceClass;
         serviceName=serviceClass.getSimpleName();
         serverAddress = sd.discover(serviceName,null);
-        nettyClient = new NettyClient(serviceClass, serverAddress);
-        nettyClient.connect();
+        connect();
         return  (T) Proxy.newProxyInstance(serviceClass.getClassLoader(), new Class[]{serviceClass}, this);
     }
 
@@ -36,8 +37,7 @@ public class ProxyHandler implements InvocationHandler {
         if (rpcResponse.getStatus() == -1) {
             atomicInteger.decrementAndGet();
             serverAddress=sd.discover(serviceName,serverAddress);
-            nettyClient = new NettyClient(nettyClient.getServiceClass(), serverAddress);
-            nettyClient.connect();
+            connect();
             try {
                 return method.invoke(proxy, args);
             } catch (Exception e) {
@@ -45,5 +45,16 @@ public class ProxyHandler implements InvocationHandler {
             }
         }
         return rpcResponse.getResult();
+    }
+
+    private void connect(){
+        nettyClient = new NettyClient(serviceClass, serverAddress);
+        Thread thread=new Thread(){
+            @Override
+            public void run() {
+                nettyClient.connect();
+            }
+        };
+        thread.start();
     }
 }
