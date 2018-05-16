@@ -12,6 +12,7 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 import java.net.InetSocketAddress;
 
 
+//只要还有连接线程，就算main线程执行完毕，程序也不会关闭
 class NettyChannel extends Thread{
 
     private ClientChannelHandler clientChannelHandler;

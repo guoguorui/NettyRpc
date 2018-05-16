@@ -103,7 +103,6 @@ public class ZKManager implements Watcher {
             if (children != null)
                 for (String c : children)
                     deleteNode(nodePath + "/" + c);
-            //zk.delete(nodePath + "/" + c, -1);
             zk.delete(nodePath, -1);
         } catch (Exception e) {
             LOGGER.error("fail to delete node " + nodePath);

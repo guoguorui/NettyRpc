@@ -57,10 +57,6 @@ class NettyClient {
         return rpcResponse;
     }
 
-    private ClientChannelHandler getClientChannelHandler() {
-        return clientChannelHandler;
-    }
-
     void setConnected(int connected) {
         this.connected = connected;
     }
