@@ -10,6 +10,8 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import org.gary.nettyrpc.carrier.RpcRequest;
 import org.gary.nettyrpc.carrier.RpcResponse;
+import org.gary.nettyrpc.common.ClientDecoder;
+import org.gary.nettyrpc.common.ClientEncoder;
 
 import java.lang.reflect.Method;
 import java.net.InetSocketAddress;
@@ -42,7 +44,8 @@ class NettyClient {
                     handler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         protected void initChannel(SocketChannel ch) throws Exception {
-                            ch.pipeline().addLast(clientChannelHandler);
+                            ch.pipeline().addLast(new ClientDecoder(1024*1024,0,4))
+                                    .addLast(new ClientEncoder()).addLast(clientChannelHandler);
                         }
                     }).
                     option(ChannelOption.SO_KEEPALIVE, true);

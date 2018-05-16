@@ -8,6 +8,8 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import org.gary.nettyrpc.common.ServerDecoder;
+import org.gary.nettyrpc.common.ServerEncoder;
 import org.gary.nettyrpc.zookeeper.ServiceRegister;
 
 import java.net.InetSocketAddress;
@@ -23,7 +25,10 @@ public class NettyServer {
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         protected void initChannel(SocketChannel channel) throws Exception {
-                            channel.pipeline().addLast(new ServerChannelHandler(implPackage));
+                            channel.pipeline()
+                                    .addLast(new ServerDecoder(1024*1024,0,4))
+                                    .addLast(new ServerEncoder())
+                                    .addLast(new ServerChannelHandler(implPackage));
                         }
                     }).option(ChannelOption.SO_BACKLOG, 128).childOption(ChannelOption.SO_KEEPALIVE, true);
             ChannelFuture future = bootstrap.bind(new InetSocketAddress(nettyPort)).sync();

@@ -19,10 +19,11 @@ public class ClientChannelHandler extends ChannelInboundHandlerAdapter {
 
     void sendRpcRequest(RpcRequest rpcRequest,CountDownLatch countDownLatch){
         idToSignal.put(rpcRequest.getId(),countDownLatch);
-        byte[] request = SerializeUtils.serialize(rpcRequest, RpcRequest.class);
-        ByteBuf clientMessage = Unpooled.buffer(request.length);
-        clientMessage.writeBytes(request);
-        ctx.writeAndFlush(clientMessage);
+        //byte[] request = SerializeUtils.serialize(rpcRequest, RpcRequest.class);
+        //ByteBuf clientMessage = Unpooled.buffer(request.length);
+        //clientMessage.writeBytes(request);
+        //ctx.writeAndFlush(clientMessage);
+        ctx.writeAndFlush(rpcRequest);
         System.out.println("请求发出去了："+rpcRequest.getId());
     }
 
@@ -33,10 +34,11 @@ public class ClientChannelHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        ByteBuf buf = (ByteBuf) msg;
-        byte[] response = new byte[buf.readableBytes()];
-        buf.readBytes(response);
-        RpcResponse rpcResponse = SerializeUtils.deserialize(response, RpcResponse.class);
+        //ByteBuf buf = (ByteBuf) msg;
+        //byte[] response = new byte[buf.readableBytes()];
+        //buf.readBytes(response);
+        //RpcResponse rpcResponse = SerializeUtils.deserialize(response, RpcResponse.class);
+        RpcResponse rpcResponse=(RpcResponse) msg;
         idToResult.put(rpcResponse.getId(),rpcResponse);
         CountDownLatch countDownLatch= idToSignal.get(rpcResponse.getId());
         countDownLatch.countDown();
