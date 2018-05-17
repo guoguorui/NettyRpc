@@ -2,27 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1dcf8d5e-1b63-496f-b891-511105526e06" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/common/ReflectionUtil.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/server/ScanImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/gary/nettyrpc/server/ScanImpl.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/gary/nettyrpc/common/SerializeUtils.class" afterPath="$PROJECT_DIR$/target/classes/org/gary/nettyrpc/common/SerializeUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/gary/nettyrpc/server/ServerChannelHandler.class" afterPath="$PROJECT_DIR$/target/classes/org/gary/nettyrpc/server/ServerChannelHandler.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/client/ClientChannelHandler.java" afterPath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/client/ClientChannelHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/client/NettyClient.java" afterPath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/client/NettyClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/client/ProxyHandler.java" afterPath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/client/ProxyHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/common/ClientDecoder.java" afterPath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/common/ClientDecoder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/common/ClientEncoder.java" afterPath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/common/ClientEncoder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/common/ServerDecoder.java" afterPath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/common/ServerDecoder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/common/ServerEncoder.java" afterPath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/common/ServerEncoder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/common/ReflectionUtil.java" afterPath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/common/ReflectionUtil.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/server/NettyServer.java" afterPath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/server/NettyServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/server/ServerChannelHandler.java" afterPath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/server/ServerChannelHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/serviceimpl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/serviceimpl/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/ClientTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/ClientTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/log4j.properties" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/common/SerializeUtils.java" afterPath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/common/SerializeUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/common/UnsafeUtil.java" afterPath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/common/CASUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/server/RpcServer.java" afterPath="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/server/RpcServer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/ServerTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/ServerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/ServerTest2.java" afterPath="$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/ServerTest2.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -38,46 +23,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ProxyHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/client/ProxyHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1197">
-              <caret line="70" column="23" lean-forward="true" selection-start-line="70" selection-start-column="23" selection-end-line="70" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClientChannelHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/client/ClientChannelHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SerializeUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/common/SerializeUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReflectionUtil.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ReflectionUtil.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/common/ReflectionUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="45" column="32" lean-forward="false" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
+            <state relative-caret-position="137">
+              <caret line="70" column="35" lean-forward="false" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServerChannelHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/server/ServerChannelHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#428#429#0" expanded="true" />
+                <element signature="e#474#475#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,30 +50,28 @@
       <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/serviceimpl/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+            <state relative-caret-position="342">
+              <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClientEncoder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/common/ClientEncoder.java">
+      <file leaf-file-name="ServerTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/ServerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="209">
+              <caret line="15" column="5" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="15" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CASUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/common/CASUtil.java">
+      <file leaf-file-name="ServerTest2.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/ServerTest2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-134">
-              <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+            <state relative-caret-position="152">
+              <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -117,8 +80,33 @@
       <file leaf-file-name="RpcClient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/client/RpcClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+            <state relative-caret-position="228">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RpcServer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/server/RpcServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+              <folding>
+                <element signature="e#131#132#0" expanded="true" />
+                <element signature="e#173#174#0" expanded="true" />
+                <element signature="e#267#438#0" expanded="true" />
+                <element signature="e#437#438#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NettyServer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/server/NettyServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -127,8 +115,8 @@
       <file leaf-file-name="ClientTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/ClientTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+            <state relative-caret-position="247">
+              <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -137,9 +125,11 @@
       <file leaf-file-name="NettyClient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/client/NettyClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="76">
+              <caret line="20" column="6" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -197,24 +187,24 @@
         <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/common/ServerDecoder.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/common/ServerEncoder.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/common/UnsafeUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/server/RpcServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/zookeeper/ServiceDiscover.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/MultiClient.java" />
-        <option value="$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/ServerTest2.java" />
-        <option value="$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/ServerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/zookeeper/ZKManager.java" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/server/ScanImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/server/ReflectionUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/server/ServerChannelHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/common/ReflectionUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/server/NettyServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/common/SerializeUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/common/CASUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/client/ClientChannelHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/serviceimpl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/ClientTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/client/NettyClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/common/ReflectionUtil.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/ServerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/server/RpcServer.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/ServerTest2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/server/NettyServer.java" />
       </list>
     </option>
   </component>
@@ -242,8 +232,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -368,8 +360,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -405,7 +395,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ClientTest">
+  <component name="RunManager" selected="Application.ServerTest">
     <configuration name="ClientTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="org.gary.nettyrpc.test.ClientTest" />
@@ -428,6 +418,25 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="org.gary.nettyrpc.test.MultiClient" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="NettyRpc" />
+      <envs />
+    </configuration>
+    <configuration name="ReflectionUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="org.gary.nettyrpc.common.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="org.gary.nettyrpc.common.ReflectionUtil" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -552,18 +561,20 @@
       <properties />
       <listeners />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.ServerTest" />
       <item index="1" class="java.lang.String" itemvalue="Application.ClientTest" />
       <item index="2" class="java.lang.String" itemvalue="Application.ServerTest2" />
       <item index="3" class="java.lang.String" itemvalue="Application.MultiClient" />
+      <item index="4" class="java.lang.String" itemvalue="Application.ReflectionUtil" />
     </list>
     <recent_temporary>
-      <list size="4">
+      <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.ClientTest" />
-        <item index="1" class="java.lang.String" itemvalue="Application.ServerTest2" />
-        <item index="2" class="java.lang.String" itemvalue="Application.ServerTest" />
-        <item index="3" class="java.lang.String" itemvalue="Application.MultiClient" />
+        <item index="1" class="java.lang.String" itemvalue="Application.ServerTest" />
+        <item index="2" class="java.lang.String" itemvalue="Application.ReflectionUtil" />
+        <item index="3" class="java.lang.String" itemvalue="Application.ServerTest2" />
+        <item index="4" class="java.lang.String" itemvalue="Application.MultiClient" />
       </list>
     </recent_temporary>
   </component>
@@ -582,7 +593,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -592,13 +602,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32405892" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32405892" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25718608" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26096824" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -608,34 +618,11 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39934534" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32405892" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25718608" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -654,13 +641,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/gary/nettyrpc-service/1.0-SNAPSHOT/nettyrpc-service-1.0-SNAPSHOT.jar!/org/gary/nettyrpc/service/UserService.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.0.24.Final/netty-all-4.0.24.Final-sources.jar!/io/netty/channel/ChannelInboundHandlerAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2166">
@@ -672,10 +652,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
           <caret line="203" column="21" lean-forward="false" selection-start-line="203" selection-start-column="21" selection-end-line="203" selection-end-column="21" />
-          <folding>
-            <element signature="e#5214#5215#0" expanded="false" />
-            <element signature="e#5290#5291#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -755,7 +731,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="1872" column="27" lean-forward="false" selection-start-line="1872" selection-start-column="27" selection-end-line="1872" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -812,16 +787,8 @@
         <state relative-caret-position="242">
           <caret line="31" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="44" selection-end-column="1" />
           <folding>
-            <element signature="e#767#768#0" expanded="true" />
+            <element signature="e#767#768#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/ServerTest2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -829,7 +796,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="497" column="0" lean-forward="false" selection-start-line="497" selection-start-column="0" selection-end-line="497" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -845,7 +811,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
           <caret line="2816" column="0" lean-forward="false" selection-start-line="2816" selection-start-column="0" selection-end-line="2816" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -859,12 +824,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/zookeeper/ServiceRegister.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-          <folding>
-            <element signature="e#142#143#0" expanded="false" />
-            <element signature="e#187#188#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="152">
+          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -873,8 +835,8 @@
         <state relative-caret-position="342">
           <caret line="26" column="34" lean-forward="false" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
           <folding>
-            <element signature="e#1054#1055#0" expanded="true" />
-            <element signature="e#1150#1151#0" expanded="true" />
+            <element signature="e#1054#1055#0" expanded="false" />
+            <element signature="e#1150#1151#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -889,19 +851,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/ServerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="1" column="31" lean-forward="false" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -916,17 +869,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/server/RpcServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/server/ServerChannelHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-172">
+        <state relative-caret-position="152">
           <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -940,7 +885,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
           <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -951,14 +895,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/server/NettyServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="22" column="20" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -990,8 +926,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/client/RpcClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        <state relative-caret-position="228">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1011,40 +947,87 @@
         <state relative-caret-position="228">
           <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/serviceimpl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+        <state relative-caret-position="342">
+          <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/client/NettyClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="76">
+          <caret line="20" column="6" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="910" column="18" lean-forward="false" selection-start-line="910" selection-start-column="18" selection-end-line="910" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/ClientTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        <state relative-caret-position="247">
+          <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/common/ReflectionUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="45" column="32" lean-forward="false" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
+        <state relative-caret-position="137">
+          <caret line="70" column="35" lean-forward="false" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/ServerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="15" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/gary/nettyrpc/test/ServerTest2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/server/NettyServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/gary/nettyrpc/server/RpcServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+          <folding>
+            <element signature="e#131#132#0" expanded="true" />
+            <element signature="e#173#174#0" expanded="true" />
+            <element signature="e#267#438#0" expanded="true" />
+            <element signature="e#437#438#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

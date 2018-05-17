@@ -8,15 +8,18 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import org.gary.nettyrpc.common.ReflectionUtil;
 import org.gary.nettyrpc.common.ServerDecoder;
 import org.gary.nettyrpc.common.ServerEncoder;
 import org.gary.nettyrpc.zookeeper.ServiceRegister;
 
 import java.net.InetSocketAddress;
+import java.util.List;
 
+//一个端口服务一个实现包
 class NettyServer {
 
-    static void processRequest(String implPackage, String serviceName, String zkAddress, int nettyPort) {
+    static void processRequest(String implPackage, String zkAddress, int nettyPort) {
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
         try {
@@ -32,8 +35,12 @@ class NettyServer {
                         }
                     }).option(ChannelOption.SO_BACKLOG, 128).childOption(ChannelOption.SO_KEEPALIVE, true);
             ChannelFuture future = bootstrap.bind(new InetSocketAddress(nettyPort)).sync();
-            ServiceRegister serviceRegister = new ServiceRegister(zkAddress);
-            serviceRegister.register(serviceName, "127.0.0.1:" + String.valueOf(nettyPort));
+            List<String> serviceNames= ReflectionUtil.getInterfaceNames(implPackage);
+            if(serviceNames!=null){
+                ServiceRegister serviceRegister = new ServiceRegister(zkAddress);
+                for(String serviceName:serviceNames)
+                    serviceRegister.register(serviceName, "127.0.0.1:" + String.valueOf(nettyPort));
+            }
             future.channel().closeFuture().sync();
         } catch (Exception e) {
             e.printStackTrace();

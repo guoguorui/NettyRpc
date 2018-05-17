@@ -3,18 +3,16 @@ package org.gary.nettyrpc.server;
 public class RpcServer {
 
     private String zkAddress;
-    private int nettyPort;
 
-    public RpcServer(String zkAddress, int nettyPort) {
+    public RpcServer(String zkAddress) {
         this.zkAddress = zkAddress;
-        this.nettyPort = nettyPort;
     }
 
-    public void provideService(String implPackage, String serviceName) {
+    public void provideService(String implPackage,int nettyPort) {
         Thread thread = new Thread() {
             @Override
             public void run() {
-                NettyServer.processRequest(implPackage, serviceName, zkAddress, nettyPort);
+                NettyServer.processRequest(implPackage, zkAddress, nettyPort);
             }
         };
         thread.start();
