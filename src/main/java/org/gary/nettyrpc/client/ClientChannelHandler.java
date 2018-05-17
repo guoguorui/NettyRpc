@@ -11,27 +11,27 @@ import java.util.concurrent.CountDownLatch;
 
 public class ClientChannelHandler extends ChannelInboundHandlerAdapter {
 
-    private ConcurrentHashMap<Integer,CountDownLatch> idToSignal =new ConcurrentHashMap<>();
-    ConcurrentHashMap<Integer,RpcResponse> idToResult =new ConcurrentHashMap<>();
+    private ConcurrentHashMap<Integer, CountDownLatch> idToSignal = new ConcurrentHashMap<>();
+    ConcurrentHashMap<Integer, RpcResponse> idToResult = new ConcurrentHashMap<>();
     private ChannelHandlerContext ctx;
 
-    void sendRpcRequest(RpcRequest rpcRequest,CountDownLatch countDownLatch){
-        idToSignal.put(rpcRequest.getId(),countDownLatch);
+    void sendRpcRequest(RpcRequest rpcRequest, CountDownLatch countDownLatch) {
+        idToSignal.put(rpcRequest.getId(), countDownLatch);
         ctx.writeAndFlush(rpcRequest);
-        System.out.println(Thread.currentThread()+"请求发出去了："+rpcRequest.getId());
+        System.out.println(Thread.currentThread() + "请求发出去了：" + rpcRequest.getId());
     }
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
-        this.ctx=ctx;
+        this.ctx = ctx;
     }
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        RpcResponse rpcResponse=(RpcResponse) msg;
-        idToResult.put(rpcResponse.getId(),rpcResponse);
-        CountDownLatch countDownLatch= idToSignal.get(rpcResponse.getId());
-        if(countDownLatch!=null){
+        RpcResponse rpcResponse = (RpcResponse) msg;
+        idToResult.put(rpcResponse.getId(), rpcResponse);
+        CountDownLatch countDownLatch = idToSignal.get(rpcResponse.getId());
+        if (countDownLatch != null) {
             idToSignal.remove(rpcResponse.getId());
             countDownLatch.countDown();
         }

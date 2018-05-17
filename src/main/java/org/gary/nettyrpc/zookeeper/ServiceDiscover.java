@@ -11,13 +11,13 @@ public class ServiceDiscover {
         zm = new ZKManager(zkAddress);
     }
 
-    public String discover(String serviceName,String exclude) {
+    public String discover(String serviceName, String exclude) {
         zm.connect();
-        List<String> services = zm.listChildren(ZKManager.ZK_REGISTRY_PATH,null);
+        List<String> services = zm.listChildren(ZKManager.ZK_REGISTRY_PATH, null);
         String address = null;
         for (String service : services) {
             if (service.equals(serviceName)) {
-                List<String> addresses = zm.listChildren( ZKManager.ZK_REGISTRY_PATH + "/"+ serviceName,exclude);
+                List<String> addresses = zm.listChildren(ZKManager.ZK_REGISTRY_PATH + "/" + serviceName, exclude);
                 Random ran = new Random();
                 //不允许size为0
                 int index = ran.nextInt(addresses.size());

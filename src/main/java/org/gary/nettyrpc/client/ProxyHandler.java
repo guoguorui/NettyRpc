@@ -18,38 +18,37 @@ public class ProxyHandler implements InvocationHandler {
     private String serverAddress;
     private Class serviceClass;
     private volatile int connectFlag;
-    private AtomicInteger waitNum = new AtomicInteger(0);;
+    private AtomicInteger waitNum = new AtomicInteger(0);
+    ;
 
-    ProxyHandler(String zkAddress){
+    ProxyHandler(String zkAddress) {
         sd = new ServiceDiscover(zkAddress);
     }
 
     @SuppressWarnings("unchecked")
     <T> T getImplObj(Class<T> serviceClass) {
-        this.serviceClass=serviceClass;
-        serviceName=serviceClass.getSimpleName();
+        this.serviceClass = serviceClass;
+        serviceName = serviceClass.getSimpleName();
         connect();
-        return  (T) Proxy.newProxyInstance(serviceClass.getClassLoader(), new Class[]{serviceClass}, this);
+        return (T) Proxy.newProxyInstance(serviceClass.getClassLoader(), new Class[]{serviceClass}, this);
     }
 
     public Object invoke(Object proxy, Method method, Object[] args) {
         int id = atomicId.addAndGet(1);
         RpcResponse rpcResponse = nettyClient.call(method, args, id);
-        System.out.println(Thread.currentThread()+"收到回应了  ：" + rpcResponse.getId());
+        System.out.println(Thread.currentThread() + "收到回应了  ：" + rpcResponse.getId());
         if (rpcResponse.getStatus() == -1) {
             try {
                 atomicId.decrementAndGet();
                 waitNum.incrementAndGet();
-                synchronized (this){
-                    if(UnsafeUtil.cas(this,0,1)){
-                        System.out.println(Thread.currentThread()+"我是领头线程，带头连接");
+                synchronized (this) {
+                    if (UnsafeUtil.cas(this, 0, 1)) {
+                        //在zk处阻塞，但不会在这里交出锁
                         connect();
                         waitNum.decrementAndGet();
-                        System.out.println("服务可用了");
-                    }else{
-                        System.out.println(Thread.currentThread()+"我是小弟线程，已经被唤醒");
-                        if(waitNum.decrementAndGet()==0)
-                            UnsafeUtil.cas(this,1,0);
+                    } else {
+                        if (waitNum.decrementAndGet() == 0)
+                            UnsafeUtil.cas(this, 1, 0);
                     }
                 }
                 return method.invoke(proxy, args);
@@ -60,10 +59,10 @@ public class ProxyHandler implements InvocationHandler {
         return rpcResponse.getResult();
     }
 
-    private void connect(){
-        serverAddress=sd.discover(serviceName,serverAddress);
+    private void connect() {
+        serverAddress = sd.discover(serviceName, serverAddress);
         nettyClient = new NettyClient(serviceClass, serverAddress);
-        Thread thread=new Thread(){
+        Thread thread = new Thread() {
             @Override
             public void run() {
                 nettyClient.connect();

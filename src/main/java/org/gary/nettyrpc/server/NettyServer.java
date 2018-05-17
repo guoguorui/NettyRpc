@@ -16,7 +16,7 @@ import java.net.InetSocketAddress;
 
 public class NettyServer {
 
-    static void processRequest(String implPackage,String zkAddress,int nettyPort) {
+    static void processRequest(String implPackage, String serviceName, String zkAddress, int nettyPort) {
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
         try {
@@ -26,14 +26,14 @@ public class NettyServer {
                         @Override
                         protected void initChannel(SocketChannel channel) throws Exception {
                             channel.pipeline()
-                                    .addLast(new ServerDecoder(1024*1024,0,4))
+                                    .addLast(new ServerDecoder(1024 * 1024, 0, 4))
                                     .addLast(new ServerEncoder())
                                     .addLast(new ServerChannelHandler(implPackage));
                         }
                     }).option(ChannelOption.SO_BACKLOG, 128).childOption(ChannelOption.SO_KEEPALIVE, true);
             ChannelFuture future = bootstrap.bind(new InetSocketAddress(nettyPort)).sync();
             ServiceRegister serviceRegister = new ServiceRegister(zkAddress);
-            serviceRegister.register("UserService", "127.0.0.1:"+String.valueOf(nettyPort));
+            serviceRegister.register(serviceName, "127.0.0.1:" + String.valueOf(nettyPort));
             future.channel().closeFuture().sync();
         } catch (Exception e) {
             e.printStackTrace();

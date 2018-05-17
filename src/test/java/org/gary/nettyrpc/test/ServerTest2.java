@@ -5,6 +5,7 @@ import org.gary.nettyrpc.server.RpcServer;
 public class ServerTest2 {
 
     public static void main(String[] args) {
-        RpcServer.provideService("serviceimpl","127.0.0.1:2181",9999);
+        RpcServer rpcServer = new RpcServer("127.0.0.1:2181", 9999);
+        rpcServer.provideService("org.gary.nettyrpc.serviceimpl", "UserService");
     }
 }

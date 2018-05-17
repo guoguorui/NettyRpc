@@ -5,13 +5,13 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.MessageToByteEncoder;
 import org.gary.nettyrpc.carrier.RpcRequest;
 
-public class ClientEncoder extends MessageToByteEncoder<RpcRequest>{
+public class ClientEncoder extends MessageToByteEncoder<RpcRequest> {
 
     @Override
     protected void encode(ChannelHandlerContext ctx, RpcRequest msg, ByteBuf out) throws Exception {
-        if(msg==null)
+        if (msg == null)
             throw new Exception("msg is null");
-        byte[] request=SerializeUtils.serialize(msg,RpcRequest.class);
+        byte[] request = SerializeUtils.serialize(msg, RpcRequest.class);
         out.writeInt(request.length);
         out.writeBytes(request);
     }

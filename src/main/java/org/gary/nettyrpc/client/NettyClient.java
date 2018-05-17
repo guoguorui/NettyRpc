@@ -34,10 +34,10 @@ class NettyClient {
         this.serverAddress = serverAddress;
     }
 
-    void connect(){
+    void connect() {
         EventLoopGroup group = new NioEventLoopGroup();
         //这里的handler仍然属于外部类，不会被匿名内部类copy
-        clientChannelHandler=new ClientChannelHandler();
+        clientChannelHandler = new ClientChannelHandler();
         try {
             Bootstrap bootstrap = new Bootstrap();
             bootstrap.group(group).
@@ -45,7 +45,7 @@ class NettyClient {
                     handler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         protected void initChannel(SocketChannel ch) throws Exception {
-                            ch.pipeline().addLast(new ClientDecoder(1024*1024,0,4))
+                            ch.pipeline().addLast(new ClientDecoder(1024 * 1024, 0, 4))
                                     .addLast(new ClientEncoder()).addLast(clientChannelHandler);
                         }
                     }).
@@ -54,21 +54,21 @@ class NettyClient {
             String host = addresses[0];
             int port = Integer.parseInt(addresses[1]);
             ChannelFuture future = bootstrap.connect(new InetSocketAddress(host, port)).sync();
-            System.out.println("与服务器建立连接："+serverAddress);
-            connected=1;
+            System.out.println("与服务器建立连接：" + serverAddress);
+            connected = 1;
             future.channel().closeFuture().sync();
         } catch (InterruptedException e) {
             //e.printStackTrace();
         } finally {
-            System.out.println("finally与服务器断开连接："+serverAddress);
-            connected=-1;
+            System.out.println("finally与服务器断开连接：" + serverAddress);
+            connected = -1;
             group.shutdownGracefully();
         }
     }
 
-    RpcResponse call(Method method,Object[] args,int requestId){
-        while (connected<1){
-            if(connected==-1)
+    RpcResponse call(Method method, Object[] args, int requestId) {
+        while (connected < 1) {
+            if (connected == -1)
                 return getErrorResponse();
         }
         RpcRequest rpcRequest = new RpcRequest();
@@ -76,21 +76,21 @@ class NettyClient {
         rpcRequest.setMethodName(method.getName());
         rpcRequest.setArgs(args);
         rpcRequest.setId(requestId);
-        CountDownLatch countDownLatch=new CountDownLatch(1);
-        clientChannelHandler.sendRpcRequest(rpcRequest,countDownLatch);
+        CountDownLatch countDownLatch = new CountDownLatch(1);
+        clientChannelHandler.sendRpcRequest(rpcRequest, countDownLatch);
         try {
             countDownLatch.await();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        ConcurrentHashMap<Integer,RpcResponse> map= clientChannelHandler.idToResult;
-        RpcResponse rpcResponse=map.get(requestId);
+        ConcurrentHashMap<Integer, RpcResponse> map = clientChannelHandler.idToResult;
+        RpcResponse rpcResponse = map.get(requestId);
         clientChannelHandler.idToResult.remove(requestId);
         return rpcResponse;
     }
 
-    private RpcResponse getErrorResponse(){
-        RpcResponse rpcResponse=new RpcResponse();
+    private RpcResponse getErrorResponse() {
+        RpcResponse rpcResponse = new RpcResponse();
         rpcResponse.setStatus(-1);
         rpcResponse.setId(-1);
         return rpcResponse;

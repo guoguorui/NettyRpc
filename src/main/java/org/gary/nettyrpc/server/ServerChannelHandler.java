@@ -19,7 +19,7 @@ public class ServerChannelHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        RpcRequest rpcRequest=(RpcRequest) msg;
+        RpcRequest rpcRequest = (RpcRequest) msg;
         Class<?> interfaceClass = rpcRequest.getInterfaceClass();
         Object implObject = ScanImpl.scanType(implPackage, interfaceClass);
         Method[] methods = implObject.getClass().getDeclaredMethods();
@@ -30,9 +30,9 @@ public class ServerChannelHandler extends ChannelInboundHandlerAdapter {
                 break;
             }
         }
-        int id=rpcRequest.getId();
+        int id = rpcRequest.getId();
         rpcResponse.setId(id);
-        System.out.println("处理完请求："+id);
+        System.out.println("处理完请求：" + id);
         ctx.writeAndFlush(rpcResponse);
     }
 

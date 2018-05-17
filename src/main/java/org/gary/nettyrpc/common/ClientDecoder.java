@@ -20,14 +20,14 @@ public class ClientDecoder extends LengthFieldBasedFrameDecoder {
         if (in.readableBytes() < 4)
             return null;
         //注意在读的过程中，readIndex的指针也在移动
-        if(length==0)
-            length=in.readInt();
+        if (length == 0)
+            length = in.readInt();
         if (in.readableBytes() < length)
             return null;
         ByteBuf buf = in.readBytes(length);
         byte[] request = new byte[buf.readableBytes()];
         buf.readBytes(request);
-        length=0;
+        length = 0;
         return SerializeUtils.deserialize(request, RpcResponse.class);
     }
 }
