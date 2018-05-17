@@ -4,22 +4,39 @@ import org.apache.log4j.Logger;
 import org.apache.zookeeper.*;
 
 import java.io.IOException;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CountDownLatch;
 
 public class ZKManager implements Watcher {
 
     private static final int ZK_SESSION_TIMEOUT = 5000;
-    static final String ZK_REGISTRY_PATH = "/origin";
+    static final String ZK_REGISTRY_PATH = "/nettyrpc";
     private static final Logger LOGGER = Logger.getLogger(ZKManager.class);
     private String zkAddress;
     private ZooKeeper zk;
     private final CountDownLatch connectedSignal = new CountDownLatch(1);
-    private CountDownLatch availableSignal;
-    private boolean waitForAvailable = false;
+    private ConcurrentHashMap<String,List<CountDownLatch>> wakeupMap = new ConcurrentHashMap<>();
 
-    public ZKManager(String zkAddress) {
-        this.zkAddress = zkAddress;
+    public ZKManager(String zkAddress){
+        try {
+            this.zkAddress = zkAddress;
+            //必须添加Watcher
+            ZooKeeper zooKeeper = new ZooKeeper(zkAddress, ZK_SESSION_TIMEOUT, new Watcher(){
+                @Override
+                public void process(WatchedEvent event) {
+                    LOGGER.debug(" receive event : "+event.getType().name());
+                }
+            });
+            if (zooKeeper.exists(ZK_REGISTRY_PATH, false) == null)
+                zooKeeper.create(ZK_REGISTRY_PATH, null, ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
+            zooKeeper.close();
+        } catch (Exception e) {
+            LOGGER.error("fail to create persistent node " + ZK_REGISTRY_PATH);
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -28,12 +45,17 @@ public class ZKManager implements Watcher {
             //connect()操作需要等待连接真正建立后才能进行后序的操作
             if (event.getType() == Event.EventType.None && event.getPath() == null) {
                 connectedSignal.countDown();
-                //唤醒正在等待服务消费者线程
+            //唤醒所有正在等待服务消费者线程
             } else if (event.getType() == Event.EventType.NodeChildrenChanged) {
                 try {
-                    if (waitForAvailable) {
-                        waitForAvailable = false;
-                        availableSignal.countDown();
+                    List<CountDownLatch> list = wakeupMap.get(event.getPath());
+                    if(list != null){
+                        while(list.size() >0 ){
+                            CountDownLatch countDownLatch = list.get(0);
+                            countDownLatch.countDown();
+                            list.remove(0);
+                        }
+                        wakeupMap.put(event.getPath(),list);
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -82,10 +104,14 @@ public class ZKManager implements Watcher {
             children = zk.getChildren(nodePath, true);
             children.remove(exclude);
             while (children.size() == 0) {
-                waitForAvailable = true;
-                System.out.println("wait for available server");
-                availableSignal = new CountDownLatch(1);
-                availableSignal.await();
+                System.out.println(Thread.currentThread()+"wait for available server");
+                CountDownLatch countDownLatch= new CountDownLatch(1);
+                List<CountDownLatch> list = wakeupMap.get(nodePath);
+                if(list == null)
+                    list = new LinkedList<>();
+                list.add(countDownLatch);
+                wakeupMap.put(nodePath,list);
+                countDownLatch.await();
                 children = zk.getChildren(nodePath, true);
             }
 

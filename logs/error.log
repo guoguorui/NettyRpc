@@ -4,3 +4,21 @@ LEAK: ByteBuf.release() was not called before it's garbage-collected. Enable adv
 [ERROR]-[05-15 17:44:53]-[method:io.netty.util.internal.logging.Slf4JLogger.error(Slf4JLogger.java:176)]
 LEAK: ByteBuf.release() was not called before it's garbage-collected. Enable advanced leak reporting to find out where the leak occurred. To enable advanced leak reporting, specify the JVM option '-Dio.netty.leakDetectionLevel=advanced' or call ResourceLeakDetector.setLevel()
 
+[ERROR]-[05-17 15:07:30]-[method:org.gary.nettyrpc.zookeeper.ZKManager.listChildren(ZKManager.java:99)]
+fail to list node /origin/UserService
+
+[ERROR]-[05-17 15:13:08]-[method:org.gary.nettyrpc.zookeeper.ZKManager.listChildren(ZKManager.java:104)]
+fail to list node /nettyrpc
+
+[ERROR]-[05-17 15:22:00]-[method:org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:524)]
+Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+[ERROR]-[05-17 15:23:04]-[method:org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:524)]
+Error while calling watcher 
+
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)

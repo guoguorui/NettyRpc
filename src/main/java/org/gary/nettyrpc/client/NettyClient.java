@@ -60,7 +60,7 @@ class NettyClient {
         } catch (InterruptedException e) {
             //e.printStackTrace();
         } finally {
-            System.out.println("finally与服务器断开连接：" + serverAddress);
+            System.out.println("与服务器断开连接：" + serverAddress);
             connected = -1;
             group.shutdownGracefully();
         }
