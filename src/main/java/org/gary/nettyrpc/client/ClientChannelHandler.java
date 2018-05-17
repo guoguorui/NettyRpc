@@ -17,10 +17,6 @@ public class ClientChannelHandler extends ChannelInboundHandlerAdapter {
 
     void sendRpcRequest(RpcRequest rpcRequest,CountDownLatch countDownLatch){
         idToSignal.put(rpcRequest.getId(),countDownLatch);
-        for (int id:idToSignal.keySet()) {
-            System.out.print(id+" ");
-        }
-        System.out.println();
         ctx.writeAndFlush(rpcRequest);
         System.out.println(Thread.currentThread()+"请求发出去了："+rpcRequest.getId());
     }
@@ -43,8 +39,8 @@ public class ClientChannelHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
-        System.out.println("与服务器断开"+ctx.channel().remoteAddress());
-        cause.printStackTrace();
+        //开启下句可以方便进行调试
+        //cause.printStackTrace();
         ctx.close();
     }
 

@@ -51,7 +51,7 @@ public class ServerChannelHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
-        cause.printStackTrace();
+        //cause.printStackTrace();
         System.out.println("客户端断开了连接");
         ctx.close();
     }
