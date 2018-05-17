@@ -18,7 +18,7 @@ public class ServerChannelHandler extends ChannelInboundHandlerAdapter {
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         RpcRequest rpcRequest = (RpcRequest) msg;
         RpcResponse rpcResponse = new RpcResponse();
-        rpcResponse.setResult(ReflectionUtil.getResult(rpcRequest,implPackage));
+        rpcResponse.setResult(ReflectionUtil.getResult(rpcRequest, implPackage));
         int id = rpcRequest.getId();
         rpcResponse.setId(id);
         System.out.println("处理完请求：" + id);

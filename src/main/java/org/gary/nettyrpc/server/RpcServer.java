@@ -8,7 +8,7 @@ public class RpcServer {
         this.zkAddress = zkAddress;
     }
 
-    public void provideService(String implPackage,int nettyPort) {
+    public void provideService(String implPackage, int nettyPort) {
         Thread thread = new Thread() {
             @Override
             public void run() {

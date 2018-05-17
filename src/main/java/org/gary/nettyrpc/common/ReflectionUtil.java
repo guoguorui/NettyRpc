@@ -21,10 +21,10 @@ public class ReflectionUtil {
         return null;
     }
 
-    private static Object getImplObj(String basePackage, Class<?> interfaceClass) throws Exception{
+    private static Object getImplObj(String basePackage, Class<?> interfaceClass) throws Exception {
         String[] classSimpleNames = getClassSimpleNames(basePackage);
         Object implObj = null;
-        if(classSimpleNames!=null){
+        if (classSimpleNames != null) {
             for (String classSimpleName : classSimpleNames) {
                 //兄弟，包名不能少啊
                 String className = basePackage + "." + classSimpleName.split("\\.")[0];
@@ -52,11 +52,11 @@ public class ReflectionUtil {
         return method.invoke(implObj, args);
     }
 
-    private static String[] getClassSimpleNames(String packageName){
+    private static String[] getClassSimpleNames(String packageName) {
         String path = packageName.replace(".", "/");
         ClassLoader cl = ReflectionUtil.class.getClassLoader();
         URL url = cl.getResource(path);
-        if(url!=null){
+        if (url != null) {
             String fileUrl = url.getFile().substring(1);
             File file = new File(fileUrl);
             return file.list();
@@ -64,13 +64,13 @@ public class ReflectionUtil {
         return null;
     }
 
-    public static List<String> getInterfaceNames(String packageName) throws Exception{
-        List<String> list=null;
-        String[] classSimpleNames= getClassSimpleNames(packageName);
-        if(classSimpleNames!=null){
-            list=new ArrayList<>();
+    public static List<String> getInterfaceNames(String packageName) throws Exception {
+        List<String> list = null;
+        String[] classSimpleNames = getClassSimpleNames(packageName);
+        if (classSimpleNames != null) {
+            list = new ArrayList<>();
             for (String classSimpleName : classSimpleNames) {
-                String className = packageName+"."+classSimpleName.split("\\.")[0];
+                String className = packageName + "." + classSimpleName.split("\\.")[0];
                 Class<?> tempClass = null;
                 tempClass = Class.forName(className);
                 list.add(tempClass.getInterfaces()[0].getSimpleName());

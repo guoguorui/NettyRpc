@@ -18,16 +18,16 @@ public class ZKManager implements Watcher {
     private String zkAddress;
     private ZooKeeper zk;
     private final CountDownLatch connectedSignal = new CountDownLatch(1);
-    private ConcurrentHashMap<String,List<CountDownLatch>> wakeupMap = new ConcurrentHashMap<>();
+    private ConcurrentHashMap<String, List<CountDownLatch>> wakeupMap = new ConcurrentHashMap<>();
 
-    public ZKManager(String zkAddress){
+    public ZKManager(String zkAddress) {
         try {
             this.zkAddress = zkAddress;
             //必须添加Watcher
-            ZooKeeper zooKeeper = new ZooKeeper(zkAddress, ZK_SESSION_TIMEOUT, new Watcher(){
+            ZooKeeper zooKeeper = new ZooKeeper(zkAddress, ZK_SESSION_TIMEOUT, new Watcher() {
                 @Override
                 public void process(WatchedEvent event) {
-                    LOGGER.debug(" receive event : "+event.getType().name());
+                    LOGGER.debug(" receive event : " + event.getType().name());
                 }
             });
             if (zooKeeper.exists(ZK_REGISTRY_PATH, false) == null)
@@ -45,17 +45,17 @@ public class ZKManager implements Watcher {
             //connect()操作需要等待连接真正建立后才能进行后序的操作
             if (event.getType() == Event.EventType.None && event.getPath() == null) {
                 connectedSignal.countDown();
-            //唤醒所有正在等待服务消费者线程
+                //唤醒所有正在等待服务消费者线程
             } else if (event.getType() == Event.EventType.NodeChildrenChanged) {
                 try {
                     List<CountDownLatch> list = wakeupMap.get(event.getPath());
-                    if(list != null){
-                        while(list.size() >0 ){
+                    if (list != null) {
+                        while (list.size() > 0) {
                             CountDownLatch countDownLatch = list.get(0);
                             countDownLatch.countDown();
                             list.remove(0);
                         }
-                        wakeupMap.put(event.getPath(),list);
+                        wakeupMap.put(event.getPath(), list);
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -104,13 +104,13 @@ public class ZKManager implements Watcher {
             children = zk.getChildren(nodePath, true);
             children.remove(exclude);
             while (children.size() == 0) {
-                System.out.println(Thread.currentThread()+"wait for available server");
-                CountDownLatch countDownLatch= new CountDownLatch(1);
+                System.out.println(Thread.currentThread() + "wait for available server");
+                CountDownLatch countDownLatch = new CountDownLatch(1);
                 List<CountDownLatch> list = wakeupMap.get(nodePath);
-                if(list == null)
+                if (list == null)
                     list = new LinkedList<>();
                 list.add(countDownLatch);
-                wakeupMap.put(nodePath,list);
+                wakeupMap.put(nodePath, list);
                 countDownLatch.await();
                 children = zk.getChildren(nodePath, true);
             }

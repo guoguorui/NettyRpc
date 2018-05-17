@@ -35,10 +35,10 @@ class NettyServer {
                         }
                     }).option(ChannelOption.SO_BACKLOG, 128).childOption(ChannelOption.SO_KEEPALIVE, true);
             ChannelFuture future = bootstrap.bind(new InetSocketAddress(nettyPort)).sync();
-            List<String> serviceNames= ReflectionUtil.getInterfaceNames(implPackage);
-            if(serviceNames!=null){
+            List<String> serviceNames = ReflectionUtil.getInterfaceNames(implPackage);
+            if (serviceNames != null) {
                 ServiceRegister serviceRegister = new ServiceRegister(zkAddress);
-                for(String serviceName:serviceNames)
+                for (String serviceName : serviceNames)
                     serviceRegister.register(serviceName, "127.0.0.1:" + String.valueOf(nettyPort));
             }
             future.channel().closeFuture().sync();
