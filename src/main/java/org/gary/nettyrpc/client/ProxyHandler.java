@@ -1,7 +1,7 @@
 package org.gary.nettyrpc.client;
 
 import org.gary.nettyrpc.carrier.RpcResponse;
-import org.gary.nettyrpc.common.UnsafeUtil;
+import org.gary.nettyrpc.common.CASUtil;
 import org.gary.nettyrpc.zookeeper.ServiceDiscover;
 
 import java.lang.reflect.InvocationHandler;
@@ -42,13 +42,13 @@ public class ProxyHandler implements InvocationHandler {
                 atomicId.decrementAndGet();
                 waitNum.incrementAndGet();
                 synchronized (this) {
-                    if (UnsafeUtil.cas(this, 0, 1)) {
+                    if (CASUtil.cas(this, 0, 1)) {
                         //在zk处阻塞，但不会在这里交出锁
                         connect();
                         waitNum.decrementAndGet();
                     } else {
                         if (waitNum.decrementAndGet() == 0)
-                            UnsafeUtil.cas(this, 1, 0);
+                            CASUtil.cas(this, 1, 0);
                     }
                 }
                 return method.invoke(proxy, args);

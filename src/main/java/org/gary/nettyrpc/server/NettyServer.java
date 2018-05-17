@@ -14,7 +14,7 @@ import org.gary.nettyrpc.zookeeper.ServiceRegister;
 
 import java.net.InetSocketAddress;
 
-public class NettyServer {
+class NettyServer {
 
     static void processRequest(String implPackage, String serviceName, String zkAddress, int nettyPort) {
         EventLoopGroup bossGroup = new NioEventLoopGroup();

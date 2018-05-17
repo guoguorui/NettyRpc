@@ -11,7 +11,7 @@ public class ClientEncoder extends MessageToByteEncoder<RpcRequest> {
     protected void encode(ChannelHandlerContext ctx, RpcRequest msg, ByteBuf out) throws Exception {
         if (msg == null)
             throw new Exception("msg is null");
-        byte[] request = SerializeUtils.serialize(msg, RpcRequest.class);
+        byte[] request = SerializeUtil.serialize(msg, RpcRequest.class);
         out.writeInt(request.length);
         out.writeBytes(request);
     }

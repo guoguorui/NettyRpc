@@ -12,4 +12,11 @@ public class UserServiceImpl implements UserService {
         user.setPassword("nico");
         return user;
     }
+
+    @Override
+    public String getPasswordByName(String s) {
+        if(s.equals("hello"))
+            return "nico";
+        return null;
+    }
 }

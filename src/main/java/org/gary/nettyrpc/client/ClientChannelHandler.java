@@ -4,9 +4,8 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import org.gary.nettyrpc.carrier.RpcRequest;
 import org.gary.nettyrpc.carrier.RpcResponse;
-import org.jboss.netty.util.internal.ConcurrentHashMap;
 
-import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CountDownLatch;
 
 public class ClientChannelHandler extends ChannelInboundHandlerAdapter {

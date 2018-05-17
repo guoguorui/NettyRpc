@@ -12,11 +12,10 @@ import org.gary.nettyrpc.carrier.RpcRequest;
 import org.gary.nettyrpc.carrier.RpcResponse;
 import org.gary.nettyrpc.common.ClientDecoder;
 import org.gary.nettyrpc.common.ClientEncoder;
-import org.jboss.netty.util.internal.ConcurrentHashMap;
 
 import java.lang.reflect.Method;
 import java.net.InetSocketAddress;
-import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CountDownLatch;
 
 class NettyClient {

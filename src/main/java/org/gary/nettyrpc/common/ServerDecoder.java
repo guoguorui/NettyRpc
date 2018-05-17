@@ -28,6 +28,6 @@ public class ServerDecoder extends LengthFieldBasedFrameDecoder {
         byte[] request = new byte[buf.readableBytes()];
         buf.readBytes(request);
         length = 0;
-        return SerializeUtils.deserialize(request, RpcRequest.class);
+        return SerializeUtil.deserialize(request, RpcRequest.class);
     }
 }

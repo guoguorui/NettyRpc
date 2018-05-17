@@ -5,10 +5,10 @@ import sun.misc.Unsafe;
 
 import java.lang.reflect.Field;
 
-public class UnsafeUtil {
+public class CASUtil {
 
-    public static long CONNECTFLAG;
-    public static sun.misc.Unsafe unsafe;
+    private static long CONNECTFLAG;
+    private static sun.misc.Unsafe unsafe;
 
     static {
         try {
